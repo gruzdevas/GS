@@ -90,8 +90,6 @@ a {
 img,
 svg {
   vertical-align: middle;
-  max-width: 100%;
-  height: auto;
 }
 
 .img-fluid {
@@ -173,17 +171,17 @@ svg {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 540px) {
   .container-sm,
   .container {
-    max-width: 540px;
+    max-width: 480px;
   }
 }
 @media (min-width: 768px) {
   .container-md,
   .container-sm,
   .container {
-    max-width: 720px;
+    max-width: 698px;
   }
 }
 @media (min-width: 992px) {
@@ -201,24 +199,29 @@ svg {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1130px;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1330px) {
   .container-xxl,
   .container-xl,
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1320px;
+    max-width: 1280px;
   }
 }
 
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .row {
@@ -254,6 +257,17 @@ svg {
   width: 100%;
 }
 
+@media (min-width: 992px) {
+  .col-lg {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-lg-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
 .socials {
   &__list {
     display: flex;
@@ -278,6 +292,10 @@ svg {
   padding: 25px 15px 75px;
   text-align: center;
 
+  @media (min-width: 992px) {
+    text-align: left;
+  }
+
   &__title {
     font-family: "DIN Next Stencil Rust", sans-serif;
     font-weight: 900;
@@ -288,15 +306,36 @@ svg {
     text-transform: uppercase;
   }
 
-  &__list {
+  &__row > * {
+    flex: 0 0 auto;
+    width: 100%;
+
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+  }
+
+  &__wrap {
     padding: 0 40px;
     margin-bottom: 40px;
   }
 
   &__item {
     margin-top: 56px;
+
+    @media (min-width: 992px) {
+      margin-top: 0 !important;
+    }
+
     &:first-child {
       margin-top: 20px;
+    }
+  }
+
+  &__inner {
+    @media (min-width: 992px) {
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -304,9 +343,13 @@ svg {
     font-size: 20px;
   }
 
-  &__img,
-  & svg {
+  &__img {
     margin-bottom: 15px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+      padding-right: 20px;
+    }
   }
 
   &__banner {
