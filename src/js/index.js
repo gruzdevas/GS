@@ -21,9 +21,25 @@ jQuery(function() {
   // });
 
   jQuery('.owl-carousel').owlCarousel({
-    margin:10,
-    loop:true,
-    autoWidth:true,
-    items:4
+    nav: true,
+    dots: false,
+    margin: 28,
+    // responsiveClass:true,
+    autoWidth: true,
+    navText: '',
+    responsive: {
+      0: {
+        items: 1,
+        // autoWidth: false,
+      },
+
+      767: {        
+        items: 2,
+      },
+
+      992: {
+        items: 3,
+      }
+    }
 })
 });
