@@ -202,6 +202,28 @@ svg {
   background-color: $black-2 !important;
 }
 
+.wrap {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (min-width: 540px) {
+    width: 540px;
+  }
+
+  @media (min-width: 992px) {
+    width: 992px;
+  }
+
+  @media (min-width: 1290px) {
+    width: 1290px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -352,6 +374,106 @@ svg {
   order: 6 !important;
 }
 
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $white;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar > .wrap {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+
+  &:first-of-type {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 14px;
+      background-color: $black-2;
+    }
+  }
+}
+
+.nav-link {
+  font-family: "PFDinTextCondPro-Medium";
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 12px;
+  color: $black-2;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.28px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link {
+    transition: none;
+  }
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: $red;
+}
+
+.site-header {
+  &__login-link {
+    font-family: "PFDinTextCondPro-Medium";
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.28px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: url(../img/sprite.png) no-repeat -37px 0;
+      margin-left: 8px;
+    }
+  }
+}
+
 .socials {
   &__list {
     display: flex;
@@ -397,8 +519,7 @@ svg {
   margin-bottom: 20px;
 
   &__row {
-    // margin: 0;
-    margin: 0 -30px;
+    margin: 0;
   }
 
   &__column {
