@@ -397,7 +397,8 @@ svg {
   margin-bottom: 20px;
 
   &__row {
-    margin: 0;
+    // margin: 0;
+    margin: 0 -30px;
   }
 
   &__column {
@@ -422,12 +423,12 @@ svg {
 
       &.owl-next {
         background-position: 0 0;
-        left: calc(100% + 8px);
+        left: calc(100% + 7px);
       }
 
       &.owl-prev {
         background-position: -77px 0;
-        right: calc(100% + 8px);
+        right: calc(100% + 7px);
       }
 
       &.disabled {
@@ -444,6 +445,55 @@ svg {
 
   p {
     margin-bottom: 1.5rem;
+  }
+}
+
+.quote {
+  min-height: 121px;
+  padding: 25px 20px 22px;
+
+  &__wrap {
+    margin: 40px 0;
+    position: relative;
+    padding: 38px 30px 0 0;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 124px;
+      height: 121px;
+      background-image: url(../img/decor.png);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      z-index: 2;
+    }
+  }
+
+  &--bg-red {
+    background-color: $red;
+    color: $white;
+  }
+
+  &__txt {
+    font-size: 20px;
+    font-family: "DIN Next Stencil Rust", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  &__autor {
+    font-family: "PFDinTextCondPro-Medium", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.28px;
+    text-align: center;
   }
 }
 
