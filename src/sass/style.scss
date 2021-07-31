@@ -25,6 +25,19 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "DIN Next Stencil Rust";
+  src: url("../fonts/DINNextStencilRust-Heavy.eot");
+  src: url("../fonts/DINNextStencilRust-Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextStencilRust-Heavy.woff2") format("woff2"),
+    url("../fonts/DINNextStencilRust-Heavy.woff") format("woff"),
+    url("../fonts/DINNextStencilRust-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -42,7 +55,7 @@ body {
   font-family: "PFDinTextCondPro-Regular", Sans-Serif;
   font-size: 1.3125rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.2;
   color: $black;
   background-color: $white;
   -webkit-text-size-adjust: 100%;
@@ -56,6 +69,7 @@ p {
 }
 
 a {
+  color: $red;
   text-decoration: underline;
 
   &[href^="mailto:"],
@@ -71,6 +85,18 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+img,
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .btn {
@@ -105,6 +131,7 @@ a {
   &-outline-primary {
     color: $red;
     border-color: $red;
+    background-color: $white;
   }
 }
 
@@ -189,6 +216,11 @@ a {
   }
 }
 
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -212,29 +244,14 @@ a {
   flex: 1 0 0%;
 }
 
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
+.row-cols-auto > * {
+  flex: 0 0 auto;
+  width: auto;
 }
 
-.footer {
-  font-size: 16px;
-  line-height: normal;
-  color: $white;
-  padding: 40px 0 30px;
-
-  &__wrap {
-    max-width: 360px;
-  }
-
-  &__txt,
-  &__address {
-    text-align: center;
-  }
-
-  @media (min-width: 576px) {
-    font-size: 14px;
-  }
+.row-cols-1 > * {
+  flex: 0 0 auto;
+  width: 100%;
 }
 
 .socials {
@@ -258,11 +275,96 @@ a {
 
 .advantages {
   background-color: $white;
+  padding: 25px 15px 75px;
+  text-align: center;
 
   &__title {
-    text-align: center;
+    font-family: "DIN Next Stencil Rust", sans-serif;
+    font-weight: 900;
     font-size: 30px;
     color: $black-3;
+    line-height: 1.2;
+    text-align: center;
     text-transform: uppercase;
+  }
+
+  &__list {
+    padding: 0 40px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-top: 56px;
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+
+  &__txt {
+    font-size: 20px;
+  }
+
+  &__img,
+  & svg {
+    margin-bottom: 15px;
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/banner_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 396px;
+    padding: 10px 15px;
+    min-height: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    span {
+      position: relative;
+      font-family: "DIN Next Stencil Rust";
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+      color: $white;
+      text-transform: uppercase;
+      top: 4px;
+    }
+  }
+
+  & + .btn__wrap {
+    transform: translateY(-50%);
+  }
+}
+
+.btn__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  font-size: 16px;
+  line-height: normal;
+  color: $white;
+  padding: 40px 0 30px;
+
+  &__wrap {
+    max-width: 360px;
+  }
+
+  &__txt,
+  &__address {
+    text-align: center;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 14px;
   }
 }
