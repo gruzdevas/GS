@@ -402,6 +402,7 @@ ul {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: $white;
+  min-height: 56px;
 }
 
 .navbar > .container,
@@ -549,7 +550,8 @@ ul {
 }
 
 .site-header {
-  padding-top: 18px;
+  position: relative;
+  padding-top: 17px;
   background-color: $white;
 
   & .navbar-collapse,
@@ -573,6 +575,10 @@ ul {
     margin-right: -50%;
     transform: translateX(-50%);
     z-index: 1021;
+  }
+
+  &__logo-img {
+    display: block;
   }
 
   &__login {
