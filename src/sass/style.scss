@@ -63,6 +63,10 @@ body {
   background: url(../img/bg_main.png);
 }
 
+svg {
+  fill: currentColor;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -409,7 +413,8 @@ ul {
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
+  // position: fixed;
   width: 100%;
   left: 0;
   right: 0;
@@ -420,7 +425,7 @@ ul {
   &.navbar-expand-xl {
     @media (min-width: 1100px) {
       position: relative;
-      min-height: 56px;
+      min-height: 74px;
     }
   }
 
@@ -589,11 +594,14 @@ ul {
 
 .site-header {
   position: relative;
-  padding-top: 17px;
   background-color: $white;
 
   & .navbar-collapse {
     justify-content: space-between;
+
+    @media (min-width: 1100px) {
+      transform: translateY(11px);
+    }
   }
 
   &__login,
@@ -635,14 +643,14 @@ ul {
 
   &__logo {
     position: absolute;
-    top: 7px;
+    top: 6px;
     left: 50%;
     margin-right: -50%;
     transform: translateX(-50%);
     z-index: 5;
 
     @media (min-width: 1100px) {
-      top: 0;
+      top: 16px;
     }
     .navbar-collapse.show + & {
       visibility: hidden;
@@ -694,6 +702,7 @@ ul {
   &__list {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   &__item {
@@ -705,6 +714,9 @@ ul {
   }
 
   &__link {
+    display: flex;
+    width: 39px;
+    height: 39px;
     text-decoration: none;
   }
 }
@@ -899,15 +911,22 @@ ul {
 
   &__img {
     margin-bottom: 15px;
+    flex: 0 0 220px;
 
     @media (min-width: 992px) {
       margin-bottom: 0;
       padding-right: 20px;
       flex: 0 0 170px;
 
-      svg {
+      svg,
+      img {
         max-width: 100%;
         width: 100%;
+        width: 220px;
+
+        @media (min-width: 992px) {
+          width: 150px;
+        }
       }
     }
   }
@@ -956,7 +975,11 @@ ul {
   font-size: 16px;
   line-height: normal;
   color: $white;
-  padding: 40px 0 30px;
+  padding: 34px 0 30px;
+
+  @media (min-width: 576px) {
+    padding: 40px 0 30px;
+  }
 
   &__wrap {
     max-width: 360px;
