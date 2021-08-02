@@ -142,6 +142,15 @@ svg {
   height: auto;
 }
 
+.red {
+  color: $red !important;
+
+  &:hover,
+  &:focus {
+    color: $black-2 !important;
+  }
+}
+
 .btn {
   display: inline-block;
   font-family: "PFDinTextCondPro-Medium", Sans-Serif;
@@ -394,7 +403,19 @@ ul {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+
+  &.navbar-expand-lg {
+    @media (min-width: 992px) {
+      position: relative;
+    }
+  }
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -417,7 +438,15 @@ ul {
   display: flex;
   align-items: center;
 
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
   @media (min-width: 992px) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
     &:first-of-type {
       &::after {
         content: "";
@@ -453,12 +482,7 @@ ul {
   }
 
   &--red {
-    color: $red;
-
-    &:hover,
-    &:focus {
-      color: $black-2;
-    }
+    @extend .red;
   }
 }
 
@@ -554,11 +578,31 @@ ul {
   padding-top: 17px;
   background-color: $white;
 
-  & .navbar-collapse,
-  &__login {
+  & .navbar-collapse {
+    justify-content: space-between;
+  }
+
+  &__login,
+  & .main-menu {
     @media (min-width: 992px) {
-      flex-grow: 0;
+      overflow: hidden;
       flex-basis: calc(50% - #{$logowidth}/ 2);
+    }
+  }
+
+  .main-menu {
+    padding-top: 18px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $red;
+    border-top: 2px solid $red;
+
+    & {
+      @media (min-width: 992px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-top: 0;
+        border-bottom: 0;
+      }
     }
   }
 
@@ -570,15 +614,26 @@ ul {
 
   &__logo {
     position: absolute;
-    top: 0;
+    top: 17px;
     left: 50%;
     margin-right: -50%;
     transform: translateX(-50%);
-    z-index: 1021;
+    z-index: 5;
+
+    .navbar-collapse.show + & {
+      visibility: hidden;
+    }
   }
 
   &__logo-img {
     display: block;
+    width: 126px;
+    height: 136px;
+
+    @media (min-width: 992px) {
+      width: 113px;
+      height: 122px;
+    }
   }
 
   &__login {
@@ -593,6 +648,7 @@ ul {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 16px;
+    @extend .red;
     letter-spacing: 1.28px;
     text-decoration: none;
     display: flex;
@@ -603,6 +659,7 @@ ul {
       display: inline-block;
       width: 26px;
       height: 26px;
+      flex: 0 0 26px;
       background: url(../img/sprite.png) no-repeat -37px 0;
       margin-left: 8px;
     }
