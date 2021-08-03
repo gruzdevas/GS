@@ -191,6 +191,10 @@ svg {
   }
 }
 
+.translate-y-50 {
+  transform: translateY(-50%);
+}
+
 .d-flex {
   display: flex !important;
 }
@@ -466,7 +470,7 @@ ul {
 }
 
 .navbar {
-  // position: absolute;
+  // position: fixed;
   width: 100%;
   left: 0;
   right: 0;
@@ -621,7 +625,7 @@ ul {
   background-position: center;
   background-size: 100%;
 
-  &-icon & {
+  .navbar-toggler__close & {
     background-image: url(../img/close-icon.svg);
   }
 }

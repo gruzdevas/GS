@@ -25,3 +25,13 @@ jQuery(function() {
     }
 })
 });
+
+$('.navbar-toggler').on('click', function(){
+  if ($(this).hasClass('navbar-toggler__close')){
+     $(this).removeClass('navbar-toggler__close');
+     $('.navbar').css({'position':'relative'});
+  } else {
+     $(this).addClass('navbar-toggler__close');
+     $('.navbar').css({'position':'absolute'});
+  }
+});
