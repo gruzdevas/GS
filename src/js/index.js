@@ -3,17 +3,12 @@ jQuery(function() {
     nav: true,
     dots: false,
     margin: 28,
-    // responsiveClass:true,
     autoWidth: true,
     navText: '',
     responsive: {
       0: {
         items: 1,
       },
-
-      // 767: {        
-      //   items: 2,
-      // },
 
       992: {
         items: 2,
@@ -32,6 +27,6 @@ $('.navbar-toggler').on('click', function(){
      $('.navbar').css({'position':'relative'});
   } else {
      $(this).addClass('navbar-toggler__close');
-     $('.navbar').css({'position':'absolute'});
+     $('.navbar').css({'position':'fixed'});
   }
 });
