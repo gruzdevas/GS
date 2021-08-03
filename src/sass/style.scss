@@ -263,18 +263,31 @@ svg {
   .mt-lg-auto {
     margin-top: auto !important;
   }
+
+  .mb-lg-0 {
+    margin-bottom: 0 !important;
+  }
 }
 
 .bg-dark {
   background-color: $black-2 !important;
 }
 
+.gutter-x {
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+
+  @media (min-width: 1330px) {
+    padding-right: 50px !important;
+    padding-left: 50px !important;
+  }
+}
+
 .wrap {
+  @extend .gutter-x;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 30px;
-  padding-left: 30px;
 }
 
 .container,
@@ -476,7 +489,7 @@ ul {
   min-height: 70px;
 
   &__wrap {
-    padding: 0 30px;
+    @extend .gutter-x;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -607,6 +620,10 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+
+  &-icon & {
+    background-image: url(../img/close-icon.svg);
+  }
 }
 
 .collapse:not(.show) {
@@ -769,6 +786,7 @@ ul {
   padding-top: 110px;
 
   &__img-1 {
+    display: block;
     position: relative;
     z-index: 1;
   }
@@ -829,7 +847,7 @@ ul {
   }
 
   &__column {
-    padding: 0 30px;
+    @extend .gutter-x;
   }
 }
 
@@ -850,16 +868,25 @@ ul {
 
       &.owl-next {
         background-position: 0 0;
-        left: calc(100% + 7px);
+        // left: calc(100% + 7px);
+        left: calc(100% + 30px - 23px);
+        @media (min-width: 1330px) {
+          left: calc(100% + 50px - 23px);
+        }
       }
 
       &.owl-prev {
         background-position: -77px 0;
-        right: calc(100% + 7px);
+        right: calc(100% + 30px - 23px);
+        // right: calc(100% + 7px);
+
+        @media (min-width: 1330px) {
+          right: calc(100% + 50px - 23px);
+        }
       }
 
       &.disabled {
-        opacity: 0.5;
+        opacity: 0.2;
         cursor: default;
       }
     }
@@ -884,9 +911,11 @@ ul {
   }
 
   &__wrap {
+    @extend .gutter-x;
     margin-bottom: 40px;
     position: relative;
-    padding: 37px 30px 0 30px;
+    padding-top: 37px;
+    padding-bottom: 0;
     z-index: 1;
 
     @media (min-width: 992px) {
@@ -957,7 +986,7 @@ ul {
 
 .advantages {
   background-color: $white;
-  padding: 25px 0 75px;
+  padding: 26px 0 75px;
   text-align: center;
 
   @media (min-width: 992px) {
