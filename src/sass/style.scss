@@ -311,8 +311,13 @@ svg {
 }
 
 .gutter-x {
-  padding-right: 30px !important;
-  padding-left: 30px !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+
+  @media (min-width: 540px) {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
 
   @media (min-width: 1330px) {
     padding-right: 50px !important;
@@ -884,7 +889,18 @@ ul {
   }
 
   &__column {
-    @extend .gutter-x;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @media (min-width: 540px) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    @media (min-width: 1330px) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
   }
 }
 
@@ -1130,13 +1146,17 @@ ul {
     span {
       position: relative;
       font-family: "DIN Next Stencil Rust";
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 900;
       line-height: 1;
       white-space: nowrap;
       color: $white;
       text-transform: uppercase;
       top: 4px;
+
+      @media (min-width: 540px) {
+        font-size: 30px;
+      }
     }
   }
 
