@@ -91,6 +91,11 @@ a {
   }
 }
 
+.anchor {
+  @media (min-width: 1100px) {
+  }
+}
+
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -112,7 +117,7 @@ a {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 2.4rem !important;
 }
 
 .mb-6 {
@@ -197,6 +202,13 @@ svg {
     color: $red;
     border-color: $red;
     background-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $red;
+      outline: currentColor;
+    }
   }
 }
 
@@ -303,6 +315,10 @@ svg {
 
   .mb-lg-auto {
     margin-bottom: auto !important;
+  }
+
+  .mb-lg--2 {
+    margin-bottom: -8px !important;
   }
 }
 
@@ -508,13 +524,16 @@ ul {
 }
 
 .navbar {
-  // position: fixed;
   width: 100%;
   left: 0;
   right: 0;
   top: 0;
-  z-index: 3;
+  z-index: 15;
   box-shadow: -2px 12px 57px 0px rgba(0, 0, 1, 0.89);
+
+  @media (min-width: 1100px) {
+    box-shadow: none;
+  }
 
   &.navbar-expand-xl {
     @media (min-width: 1100px) {
@@ -754,7 +773,23 @@ ul {
 
     @media (min-width: 1100px) {
       top: 16px;
+
+      // &::after {
+      //   position: absolute;
+      //   content: "";
+      //   left: 50%;
+      //   top: 58px;
+      //   display: block;
+      //   width: 450px;
+      //   height: 167px;
+      //   margin-right: -50%;
+      //   transform: translateX(-50%);
+      //   background: url(../img/logo-shadow.png) no-repeat 50% 0;
+      //   // background-size: contain;
+      //   z-index: 1;
+      // }
     }
+
     .navbar-collapse.show + & {
       visibility: hidden;
     }
@@ -766,7 +801,9 @@ ul {
     height: auto;
 
     @media (min-width: 1100px) {
+      position: relative;
       width: 113px;
+      z-index: 2;
     }
   }
 
@@ -804,21 +841,6 @@ ul {
   }
 }
 
-.logo-shadow {
-  position: absolute;
-  // content: "";
-  left: 50%;
-  top: 0;
-  display: block;
-  width: 450px;
-  height: 167px;
-  margin-right: -50%;
-  transform: translateX(-50%);
-  background: url(../img/logo-shadow.png) no-repeat 50% 0;
-  // background-size: contain;
-  z-index: 1;
-}
-
 .pic {
   position: relative;
   background-image: url(../img/pic-1.png);
@@ -827,10 +849,35 @@ ul {
   background-position: 50% 0;
   padding-top: 120px;
 
+  @media (min-width: 1100px) {
+    &::before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 0;
+      display: block;
+      width: 842px;
+      height: 209px;
+      // width: 450px;
+      // height: 167px;
+      margin-right: -50%;
+      transform: translateX(-50%);
+      background: url(../img/logo-shadow.png) no-repeat 50% 0;
+      // background-size: contain;
+      z-index: 7;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 10;
+  }
+
   &__img-1 {
     display: block;
     position: relative;
     z-index: 1;
+    width: 100%;
   }
 }
 
@@ -860,12 +907,16 @@ ul {
 .title-1 {
   font-family: "DIN Next Stencil Rust", sans-serif;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 25px;
   color: $black-3;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
+
+  @media (min-width: 540px) {
+    font-size: 36px;
+  }
 
   @media (min-width: 992px) {
     font-size: 36px;
@@ -921,7 +972,6 @@ ul {
 
       &.owl-next {
         background-position: 0 0;
-        // left: calc(100% + 7px);
         left: calc(100% + 30px - 23px);
         @media (min-width: 1330px) {
           left: calc(100% + 50px - 23px);
@@ -931,7 +981,6 @@ ul {
       &.owl-prev {
         background-position: -77px 0;
         right: calc(100% + 30px - 23px);
-        // right: calc(100% + 7px);
 
         @media (min-width: 1330px) {
           right: calc(100% + 50px - 23px);
@@ -949,9 +998,14 @@ ul {
 .info-1 {
   font-size: 20px;
   text-align: center;
+  margin-bottom: 1.8rem;
 
-  p {
-    margin-bottom: 1.5rem;
+  @media (min-width: 992px) {
+    margin-bottom: 2.6rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -973,13 +1027,14 @@ ul {
 
     @media (min-width: 992px) {
       margin-bottom: 56px;
+      padding-top: 60px;
 
       &::before {
         content: "";
         position: absolute;
         display: block;
         left: 92px;
-        top: -24px;
+        top: -1px;
         width: 119px;
         height: 132px;
         background-image: url(../img/logo.svg);
@@ -1001,6 +1056,11 @@ ul {
       background-repeat: no-repeat;
       background-size: 100% auto;
       z-index: 2;
+
+      @media (min-width: 992px) {
+        width: 206px;
+        height: 192px;
+      }
     }
   }
 
