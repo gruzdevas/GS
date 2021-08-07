@@ -4,6 +4,7 @@ jQuery(function() {
     dots: false,
     margin: 28,
     autoWidth: true,
+    
     navText: '',
     responsive: {
       0: {

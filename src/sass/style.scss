@@ -92,7 +92,10 @@ a {
 }
 
 .anchor {
+  scroll-margin-top: 340px;
+
   @media (min-width: 1100px) {
+    scroll-margin-top: 0;
   }
 }
 
@@ -843,7 +846,7 @@ ul {
 
 .pic {
   position: relative;
-  background-image: url(../img/pic-1.png);
+  background-image: url(../img/pic-1-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 0;
@@ -858,12 +861,10 @@ ul {
       display: block;
       width: 842px;
       height: 209px;
-      // width: 450px;
-      // height: 167px;
       margin-right: -50%;
       transform: translateX(-50%);
       background: url(../img/logo-shadow.png) no-repeat 50% 0;
-      // background-size: contain;
+      background-size: cover;
       z-index: 7;
     }
   }
@@ -877,7 +878,6 @@ ul {
     display: block;
     position: relative;
     z-index: 1;
-    width: 100%;
   }
 }
 
