@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Личный кабинет</title>
+	<meta name="description" content="Сайт об HTML и создании сайтов">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="d-flex flex-column h-100">
+	<header class="site-header">
+
+		<nav class="navbar navbar-expand-xl">
+			<div class="container">
+				<div class="navbar__wrap">
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-header__navbar"
+						aria-controls="site-header__navbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="site-header__navbar">
+						<ul class="navbar-nav main-menu">
+							<li class="nav-item"><a href="#about-us" class="nav-link">О Supporters Group</a></li>
+							<li class="nav-item"><a href="#advantages" class="nav-link">Преимущества участников</a></li>
+							<li class="nav-item d-xl-none"><a href="#" class="nav-link nav-link--red">Вступить в Supporters Group</a>
+							</li>
+						</ul>
+
+						<div class="site-header__login"><a href="#" class="nav-link site-header__login-link">Войти</a></div>
+					</div>
+
+					<div class="site-header__logo logo">
+						<img src="img/logo.svg" class="site-header__logo-img" width="126" height="140" alt="logo">
+					</div>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+	<main class="flex-shrink-0">
+
+		<div class="account">
+			<h1 class="account__header">Личный кабинет</h1>
+			<div class="account__body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<form class="account__form">
+								<div class="row mb-3">
+									<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="inputEmail3">
+									</div>
+								</div>
+
+								<div class="row mb-3">
+									<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="inputPassword3">
+									</div>
+								</div>
+
+							</form>
+						</div>
+						<div class="col-md-6">2 колонка</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<footer class="footer mt-auto bg-dark">
+		<div class="container">
+			<div class="socials">
+				<div class="socials__list">
+					<div class="socials__item"><a href="https://www.youtube.com/c/SupportersGroup?app=desktop"
+							class="socials__link" title="Youtube" target="_blank"><img src="img/circle_youtube.svg"
+								class="img-fluid"></a>
+					</div>
+					<div class="socials__item"><a href="https://vk.com/sgfcsm" class="socials__link" title="Вконтакте"
+							target="_blank"><img src="img/circle_vk.svg" class="img-fluid"></a></div>
+					<div class="socials__item"><a href="https://www.instagram.com/supporters_group/" class="socials__link"
+							title="Инстаграм" target="_blank"><img src="img/circle_insta.svg" class="img-fluid"></a></div>
+				</div>
+			</div>
+			<div class="footer__wrap mx-auto">
+				<div class="footer__txt">Региональная общественная организация «Содействие развитию спорта «ПОДДЕРЖКА»</div>
+				<div class="footer__address">115191, г. Москва, пер. Духовской, д. 17, стр. 15</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+		integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

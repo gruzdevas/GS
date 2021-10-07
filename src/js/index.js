@@ -1,4 +1,7 @@
-jQuery(function() {
+// import "bootstrap";
+// import "popper.js";
+
+jQuery(function () {
   jQuery('.owl-carousel').owlCarousel({
     nav: true,
     dots: false,
