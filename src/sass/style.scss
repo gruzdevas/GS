@@ -116,14 +116,45 @@ a {
     white-space: nowrap;
     text-decoration: none;
   }
+
   &[href^="mailto:"] {
     text-decoration: underline;
   }
+
   &:hover {    
     text-decoration: none;
   }
 }
 
+.link {
+  font-size: 18px;
+  line-height: 22px;
+
+  &-underline {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    border-bottom: 1px solid currentColor;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
 
 button {
   border-radius: 0;
@@ -285,11 +316,13 @@ svg {
   &:hover {
     color: #212529;
   }
+
   @media (prefers-reduced-motion: reduce) {
     & {
       transition: none;
     }
   }
+
   &-outline-primary {
     color: $red;
     border-color: $red;
@@ -311,6 +344,16 @@ svg {
       background-color: $white;
       border-color: $red-2;
     }
+  }
+
+  &-lg {
+    padding: 0.75rem 1rem;
+    font-size: 1.8125rem;
+    line-height: 1.20689;
+  }
+
+  &-ltsp-lg {
+    letter-spacing: 0.12em;
   }
 }
 
@@ -670,7 +713,6 @@ ul {
     display: flex;
     flex-direction: column;
   }
-
   
   &.fixed {
     box-shadow: -2px 12px 57px 0px rgba(0, 0, 1, 0.89);
@@ -1468,7 +1510,6 @@ ul {
   width: 100%;
   padding: 6px 13px;
   font-size: 25px;
-  font-weight: 400;
   line-height: 30px;
   color: $black-1;
   background-color: $white;
@@ -1501,11 +1542,13 @@ ul {
   height: 1.5em;
 }
 .form-control::-moz-placeholder {
-  color: $black-1;
+  font-family: "PFDinTextCondPro-Regular";
+  color: $gray;
   opacity: 1;
 }
 .form-control::placeholder {
-  color: $black-1;
+  font-family: "PFDinTextCondPro-Regular";
+  color: $gray;
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
@@ -1568,6 +1611,75 @@ ul {
   }
 }
 
+
+.form-floating {
+  position: relative;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3.5rem + 2px);
+  line-height: 1.25;
+}
+.form-floating > label {  
+  font-family: "PFDinTextCondPro-Regular";
+  font-size: 18px;
+  font-weight: normal;
+  color: $gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-floating > label {
+    transition: none;
+  }
+}
+.form-floating > .form-control {
+  padding: 1rem 0.75rem;
+}
+.form-floating > .form-control::-moz-placeholder {
+  color: transparent;
+}
+.form-floating > .form-control::placeholder {
+  color: transparent;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+.form-floating > .form-control:-webkit-autofill {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+.form-floating > .form-select {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+.form-floating > .form-control:-webkit-autofill ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -1583,33 +1695,46 @@ ul {
   &__btn-close {
     background: none;
     border: 0;
+    position: absolute;
+    right: .8rem;
+    top: .8rem;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__link {
+    color: $black-1;
   }
   
-  &__title {
-    @extend h2;
-    text-align:center;
-    margin-bottom: 0;
-  }
 }
 
 .modal-dialog {
   position: relative;
+  padding: 9px;
+  background: $white;
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
 }
+
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
 }
+
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     transition: none;
   }
 }
+
 .modal.show .modal-dialog {
   transform: none;
 }
+
 .modal.modal-static .modal-dialog {
   transform: scale(1.02);
 }
@@ -1617,10 +1742,12 @@ ul {
 .modal-dialog-scrollable {
   height: calc(100% - 1rem);
 }
+
 .modal-dialog-scrollable .modal-content {
   max-height: 100%;
   overflow: hidden;
 }
+
 .modal-dialog-scrollable .modal-body {
   overflow-y: auto;
 }
@@ -1631,6 +1758,11 @@ ul {
   min-height: calc(100% - 1rem);
 }
 
+.modal-title {
+  @extend h2;
+  margin-bottom: 0;
+}
+
 .modal-content {
   position: relative;
   display: flex;
@@ -1639,8 +1771,7 @@ ul {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border: 1px solid $black-2;
   outline: 0;
 }
 
@@ -1661,20 +1792,16 @@ ul {
 }
 
 .modal-header {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1rem;
-  border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
+  // display: flex;
+  // flex-shrink: 0;
+  // align-items: center;
+  // justify-content: space-between;
+  padding: 56px 1rem 1rem 1rem;
 }
 .modal-header .btn-close {
   padding: 0.5rem 0.5rem;
   margin: -0.5rem -0.5rem -0.5rem auto;
 }
-
 
 .modal-body {
   position: relative;
@@ -1683,16 +1810,11 @@ ul {
 }
 
 .modal-footer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
-  border-bottom-right-radius: calc(0.3rem - 1px);
-  border-bottom-left-radius: calc(0.3rem - 1px);
 }
+
 .modal-footer > * {
   margin: 0.25rem;
 }
