@@ -20,6 +20,48 @@
 
 <body>
   <div class="container">
+    <!-- Button trigger modal -->
+    <a href="#loginmodal" class="nav-link site-header__login-link">Войти</a>
+    <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">
+      Войти
+    </button>
+
+  </div>
+  <div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.7 450.7" xml:space="preserve" width="20px" height="20px;">
+      <path
+        d="M268.6 225.3 441.7 52.2c11.9-11.9 11.9-31.3 0-43.3C429.8-3 410.4-3 398.4 9L225.3 182.1 52.2 9C40.3-3 20.9-3 9 9-3 20.9-3 40.3 9 52.2l173.1 173.1L9 398.4c-12 12-12 31.4 0 43.3 11.9 11.9 31.3 11.9 43.3 0l173.1-173.1 173.1 173.1c11.9 11.9 31.3 11.9 43.3 0s11.9-31.3 0-43.3L268.6 225.3z"
+        fill="currentColor" />
+    </svg>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title modal__title">ВХОД И РЕГИСТРАЦИЯ</h5>
+          <button type="button" class="modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Close"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.7 450.7" xml:space="preserve" width="20px"
+              height="20px;">
+              <path
+                d="M268.6 225.3 441.7 52.2c11.9-11.9 11.9-31.3 0-43.3C429.8-3 410.4-3 398.4 9L225.3 182.1 52.2 9C40.3-3 20.9-3 9 9-3 20.9-3 40.3 9 52.2l173.1 173.1L9 398.4c-12 12-12 31.4 0 43.3 11.9 11.9 31.3 11.9 43.3 0l173.1-173.1 173.1 173.1c11.9 11.9 31.3 11.9 43.3 0s11.9-31.3 0-43.3L268.6 225.3z"
+                fill="currentColor" />
+            </svg></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------>
+
+  <div class="container">
     <div class="user">
       <div class="user__wrap">
         <div class="user__body">
