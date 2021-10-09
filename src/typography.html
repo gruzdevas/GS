@@ -25,14 +25,62 @@
       Войти
     </button>
 
-    <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal"
-      data-bs-target="#delaccountmodal">
+    <button type="button" class="" data-bs-toggle="modal" data-bs-target="#whydelaccountmodal">
+      Почему Вы покидаете GS?
+    </button>
+
+    <button type="button" class="" data-bs-toggle="modal" data-bs-target="#delaccountmodal">
       Покинуть SG
     </button>
+
   </div>
 
+  <!-- Modal Почему Вы покидаеете аккаунт?-->
+  <div class="modal fade whydelaccount" id="whydelaccountmodal" tabindex="-1"
+    aria-labelledby="Почему Вы покидаеете аккаунт?" aria-hidden="true">
+    <div class="modal-dialog whydelaccount__modal-dialog modal-dialog--decor-1 modal-dialog--decor-2">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title modal__title">УКАЖИТЕ ПРИЧИНУ<br>ПО КОТОРОЙ ВЫ ПОКИДАЕТЕ SUPPORTERS GROUP</h5>
+          <button type="button" class="modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body whydelaccount__modal-body">
+          <form class="whydelaccount__form">
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="whydelaccount" id="whydelaccount1" checked>
+              <label class="form-check-label whydelaccount__label" for="whydelaccount1"> я потерял интерес к
+                проекту</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="whydelaccount" id="whydelaccount2">
+              <label class="form-check-label whydelaccount__label" for="whydelaccount2">я болею за Динамо</label>
+            </div>
+
+            <div class="form-floating">
+              <textarea class="form-control whydelaccount__txt" placeholder="свой комментарий"
+                id="whydelaccount__txt"></textarea>
+              <label for="whydelaccount__txt" class="whydelaccount__label-txt">свой комментарий</label>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <form class="whydelaccount__form">
+            <div class="btn__wrap mx-0 mb-5">
+              <button type="submit" value="Нет" class="btn btn-primary btn-lg btn-ltsp-lg">ПОКИНУТЬ SG</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!------------------>
+
   <!-- Modal Покинуть аккаунт-->
-  <div class="modal fade delaccount" id="delaccountmodal" tabindex="-1" aria-labelledby="Форма регистрации"
+  <div class="modal fade delaccount" id="delaccountmodal" tabindex="-1" aria-labelledby="Покинуть аккаунт"
     aria-hidden="true">
     <div class="modal-dialog delaccount__modal-dialog modal-dialog--decor-1 modal-dialog--decor-2">
       <div class="modal-content">

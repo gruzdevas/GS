@@ -417,7 +417,7 @@ svg {
   color: $white;
   background-color: $red-2;
   border-color: $red-2;
-  box-shadow: 0 0 0 0.25rem rgba(229, 34, 37, 0.5);
+  box-shadow: $box-shadow;
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: $white;
@@ -425,7 +425,7 @@ svg {
   border-color: $red-2;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(229, 34, 37, 0.5);
+  box-shadow: $box-shadow;
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
@@ -1737,6 +1737,74 @@ ul {
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
+
+.form-check {
+  display: block;
+  min-height: 35px;
+  padding-left: 66px;
+  margin-bottom: 34px;
+}
+.form-check .form-check-input {
+  float: left;
+  margin-left: -51px;
+}
+
+.form-check-input {
+  width: 35px;
+  height: 35px;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-size: 60%;
+  border: 1px solid $red-3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+.form-check-input[type=radio] {
+  border-radius: 50%;
+  font-size: 0;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  border-color: #86b7fe;
+  // outline: 0;
+  // box-shadow: $box-shadow;
+}
+.form-check-input:checked {
+  background-color: $red-2;
+  border-color: $red-2;
+}
+.form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06 9.83006L8.15 20.2001L18.6 1.06006' stroke='white' stroke-width='2.126' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.form-check-input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06 9.83006L8.15 20.2001L18.6 1.06006' stroke='white' stroke-width='2.126' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.form-check-input[type=checkbox]:indeterminate {
+  background-color: $red-2;
+  border-color: $red-2;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  opacity: 0.5;
+}
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -2062,10 +2130,26 @@ ul {
   }
 }
 
-.login {
-  
-  &__modal-dialog {
+.whydelaccount {
+  &__modal-body {
+    padding-bottom: 38px;
+  }
 
+  &__label {
+    font-family: "PFDinTextCondPro-Medium";
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $black-1;
+
+    &-txt {
+      padding-top: 12px !important;
+    }
+  }
+
+  &__txt {
+    padding-top: 1.2rem !important;
+    height: 186px !important;
   }
 }
 
