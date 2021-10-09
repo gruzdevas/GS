@@ -144,6 +144,38 @@ a {
   }
 }
 
+.decor-1 {  
+  &::after {    
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 120px;
+    height: 86px;
+    background-image: url(../img/decor1.svg);
+    background-repeat: no-repeat;
+    z-index: 2;
+    right: 0;
+    bottom: 16px;
+    transform: rotate(180deg);
+  }
+}
+
+.decor-2 {      
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 120px;
+    height: 86px;
+    background-image: url(../img/decor1.svg);
+    background-repeat: no-repeat;
+    z-index: 2;
+    top: 16px;
+    left: 0;
+  }
+}
+
+
 .text-start {
   text-align: left !important;
 }
@@ -223,6 +255,11 @@ textarea {
   @media (min-width: 1100px) {
     scroll-margin-top: 0;
   }
+}
+
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 
 .mb-0 {
@@ -311,7 +348,9 @@ svg {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1.28px;
-  min-width: 300px;
+  width: 300px;
+  max-width: 100%;
+  // min-width: 300px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &:hover {
     color: #212529;
@@ -1407,7 +1446,7 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.25rem;
+  padding: 2.125rem 1.25rem;
   text-align: left;
   background-color: $white;
   overflow-anchor: none;
@@ -1457,6 +1496,7 @@ ul {
 }
 
 .accordion-header {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1611,7 +1651,6 @@ ul {
   }
 }
 
-
 .form-floating {
   position: relative;
 }
@@ -1721,6 +1760,32 @@ ul {
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
+
+  &--decor-1 {
+    @extend .decor-1;
+    &::before {
+      background-size: 60%;
+    
+      @media (min-width: 480px) {
+        background-size: auto;
+      }
+    }
+  }
+  
+  &--decor-2 {
+    @extend .decor-2;
+    &::after {
+      background-size: 60%;
+      display: none;
+      @media (min-width: 453px) {
+        display: initial;
+      }
+
+      @media (min-width: 556px) {
+        background-size: auto;
+      }
+    }
+  }
 }
 
 .modal.fade .modal-dialog {
@@ -1982,30 +2047,9 @@ ul {
 .login {
   
   &__modal-dialog {
-    &::before, &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      width: 120px;
-      height: 86px;
-      background-image: url(../img/decor1.svg);
-      background-repeat: no-repeat;
-      z-index: 2;
-    }
 
-    &::after {
-      right: 0;
-      bottom: 16px;
-      transform: rotate(180deg);
-    }
-
-    &::before {
-      top: 16px;
-      left: 0;
-    }
   }
 }
-
 
 .footer {
   font-size: 16px;

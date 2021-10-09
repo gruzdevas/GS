@@ -40,7 +40,7 @@
 
             <div class="site-header__login">
               <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+                data-bs-target="#loginmodal">
                 Войти
               </button>
             </div>
@@ -248,22 +248,36 @@
     </div>
   </footer>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <!-- Modal Login-->
+  <div class="modal fade login" id="loginmodal" tabindex="-1" aria-labelledby="Форма регистрации" aria-hidden="true">
+    <div class="modal-dialog login__modal-dialog modal-dialog--decor-1 modal-dialog--decor-2">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title modal__title">ВХОД И РЕГИСТРАЦИЯ</h5>
+          <button type="button" class="modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <form class="login__form">
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control" id="login__username" placeholder="Логин" required>
+              <label for="login__username">Логин</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="password" class="form-control" id="login__password" placeholder="Пароль" required>
+              <label for="login__password">Пароль</label>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="btn__wrap mx-0 mb-3">
+            <button type="submit" class="btn btn-primary btn-lg btn-ltsp-lg">Войти</button>
+          </div>
+          <div class="text-center mb-2"><a href="registration.html" title="Регистрация"
+              class="modal__link link link-underline">Регистрация</a>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
   <!------------------>
