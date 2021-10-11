@@ -77,7 +77,7 @@
 															<label for="account__username" class="col-sm-2 col-form-label">Имя<sup
 																	class="form__sup">*</sup></label>
 															<div class="col-sm-10">
-																<input type="text" class="form-control" id="account__username" value=""
+																<input type="text" class="form-control  is-invalid" id="account__username" value=""
 																	placeholder="Олег" required>
 															</div>
 														</div>
@@ -116,7 +116,7 @@
 															</div>
 														</div>
 
-														<div class="row mb-3">
+														<div class="row mb-7">
 															<label for="account__city" class="col-sm-2 col-form-label">Город<sup
 																	class="form__sup">*</sup></label>
 															<div class="col-sm-10">
@@ -126,6 +126,40 @@
 														</div>
 														<div class="btn__wrap">
 															<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">СОХРАНИТЬ</button>
+														</div>
+													</form>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingFour">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+													data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+													ПОДПИСКА
+												</button>
+											</h2>
+											<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+												data-bs-parent="#accordionAccount">
+												<div class="accordion-body">
+													<form class="account__form">
+
+														<div class="form-check mb-3">
+															<input type="radio" class="form-check-input account__subscribe1 checked disabled"
+																id="account__subscribe1" name="radio-stacked" required>
+															<label class="form-check-label" for="account__subscribe">Подписка не активна</label>
+														</div>
+														<div class="form-check">
+															<input type="radio" class="form-check-input account__subscribe-input is-invalid"
+																id="account__subscribe2" name="radio-stacked" required>
+															<label class="form-check-label account__subscribe-label" for="account__subscribe2">
+																Автоматическое проделение подписки
+																21.02.2021 Будет списано 1200₽
+																radio</label>
+														</div>
+														<div class="btn__wrap">
+															<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">ПРОДЛИТЬ</button>
 														</div>
 													</form>
 												</div>
@@ -148,7 +182,7 @@
 												<div class="accordion-body">
 													<form class="account__form">
 
-														<div class="row mb-3">
+														<div class="row mb-7">
 															<label for="account__username" class="col-sm-2 col-form-label">Имя<sup
 																	class="form__sup">*</sup></label>
 															<div class="col-sm-10">
@@ -186,7 +220,7 @@
 																	placeholder="" required>
 															</div>
 														</div>
-														<div class="row mb-3">
+														<div class="row mb-7">
 															<label for="account__password-repeat" class="col-sm-2 col-form-label">Подтвердить
 																пароль<sup class="form__sup">*</sup></label>
 															<div class="col-sm-10">
