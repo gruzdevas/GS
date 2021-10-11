@@ -1533,16 +1533,11 @@ ul {
   border-top: 1px solid $gray;
 }
 
-// .accordion-item:first-of-type {  
-//   border-top: 1px solid $gray;
-// }
 @media (min-width: 768px) {
+  .accordion-item:first-of-type {  
+    border-top: 1px solid $gray;
+  }
 }
-
-// .accordion-item:first-of-type {
-//   border-top: 1px solid $gray;
-//   border-bottom: 0;
-// }
 
 .accordion-body {
   padding: 1rem 0;
