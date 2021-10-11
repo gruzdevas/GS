@@ -143,27 +143,29 @@
 											<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
 												data-bs-parent="#accordionAccount">
 												<div class="accordion-body">
-													<form class="account__form">
 
-														<div class="form-check mb-3">
-															<input type="radio" class="form-check-input account__subscribe1 checked disabled"
-																id="account__subscribe1" name="radio-stacked" required>
-															<label class="form-check-label" for="account__subscribe">Подписка не активна</label>
+													<!--Подписка неактуальна-->
+													<div class="alert mb-3">
+														<div class="alert__label no-actual alert--icon mb-3">Подписка не активна</div>
+														<div class="alert__label no-actual mb-3">
+															Автоматическое продление подписки<br>
+															21.02.2021 Будет списано 1200₽
 														</div>
-														<div class="form-check">
-															<input type="radio" class="form-check-input account__subscribe-input is-invalid"
-																id="account__subscribe2" name="radio-stacked" required>
-															<label class="form-check-label account__subscribe-label" for="account__subscribe2">
-																Автоматическое проделение подписки
-																21.02.2021 Будет списано 1200₽
-																radio</label>
-														</div>
-														<div class="btn__wrap">
-															<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">ПРОДЛИТЬ</button>
-														</div>
-													</form>
+													</div>
+													<div class="btn__wrap">
+														<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">ПРОДЛИТЬ</button>
+													</div>
 												</div>
 
+												<!--Подписка актуальна-->
+												<div class="alert mb-3">
+													<div class="alert__label mb-3">Подписка активна до 21.02.2021</div>
+													<div class="alert__label mb-3">
+														Автоматическое продление подписки<br>
+														21.02.2021 Будет списано 1200₽
+													</div>
+												</div>
+												<!---------------->
 											</div>
 										</div>
 
