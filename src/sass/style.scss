@@ -68,21 +68,27 @@ h1 {
   font-family: "DIN Next Stencil Rust";
   color: $black-1;
   font-weight: 900;
-  font-size: 36px;
-  line-height: 47px;
+  font-size: 30px;
+  line-height: 39px;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 46px;
+  }
 }
 
 h2 {
   font-family: 'PFDinTextCondPro-Bold', sans-serif;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 24px;
+  line-height: 29px;
   color: $black-1;
-  line-height: 22px;
   font-weight: bold;
 
-  @media (min-width: 481px) {
+  @media (min-width: 768px) {
     font-size: 29px;
     line-height: 35px;
   }
@@ -973,17 +979,17 @@ ul {
   display: none;
 }
 
-// .collapsing:not(#site-header__navbar) {
-//   height: 0;
-//   overflow: hidden;
-//   transition: height 0.35s ease;
-// }
-
-.collapsing {
+.collapsing:not(#site-header__navbar) {
   height: 0;
   overflow: hidden;
   transition: height 0.35s ease;
 }
+
+// .collapsing {
+//   height: 0;
+//   overflow: hidden;
+//   transition: height 0.35s ease;
+// }
 
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
@@ -1067,8 +1073,12 @@ ul {
   }
   &__logo-img {
     display: block;
-    width: 126px;
-    height: auto;
+    width: 68px;
+    height: 72px;
+    @media (min-width: 768px) {
+      width: 126px;
+      height: auto;
+    }
     @media (min-width: 1100px) {
       position: relative;
       width: 113px;
@@ -1557,7 +1567,6 @@ ul {
     color: $white;
     text-decoration: none;
   }
-
 }
 
 .account {
@@ -1598,11 +1607,14 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 2.125rem 0;
+  padding: 1.1rem 0 1.12rem;
   text-align: left;
   background-color: $white;
   overflow-anchor: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  @media (min-width: 768px) {
+    padding: 2.125rem 0;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button { 
@@ -1615,18 +1627,29 @@ ul {
 }
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 11 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06 1.06L9.79 11.69L1.06 22.32' stroke='%23FF1D25' stroke-width='2.126' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  transform: rotate(90deg);
+  transform: translateY(-7px) rotate(90deg);
+  @media (min-width: 768px) {
+    transform: translateY(-4px) rotate(90deg);
+  }
 }
 .accordion-button::after {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   margin-left: auto;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 11 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06 1.06L9.79 11.69L1.06 22.32' stroke='%23FF1D25' stroke-width='2.126' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-size: 24px;
+  background-size: 15px;
+  align-self: flex-end;
   transition: transform 0.2s ease-in-out;
+  transform: rotate(0) translateY(-7px);
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    transform: translateY(-4px) rotate(0);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button::after {
@@ -1660,10 +1683,6 @@ ul {
   }
 }
 
-.accordion-body {
-  padding: 1rem 0;
-}
-
 .accordion-flush .accordion-collapse {
   border-width: 0;
 }
@@ -1694,12 +1713,12 @@ ul {
 
 .form-control {
   font-family: "PFDinTextCondPro-Medium";
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 500;
   display: block;
   width: 100%;
-  padding: 6px 13px;
-  font-size: 25px;
-  line-height: 30px;
+  padding: 9px 13px;
   color: $black-1;
   background-color: $white;
   background-clip: padding-box;
@@ -1709,6 +1728,12 @@ ul {
   appearance: none;
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
+  @media (min-width: 768px) {
+    font-size: 25px;
+    line-height: 30px;    
+    padding: 6px 13px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control {
