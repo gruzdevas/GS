@@ -18,9 +18,90 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-  <div class="container">
-    <!-- Button trigger modal -->
+<body class="d-flex flex-column h-100">
+  <header class="site-header">
+
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+        <div class="navbar__wrap">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-header__navbar"
+            aria-controls="site-header__navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="site-header__navbar">
+            <ul class="navbar-nav main-menu">
+              <li class="nav-item"><a href="#about-us" class="nav-link">О Supporters Group</a></li>
+              <li class="nav-item"><a href="#advantages" class="nav-link">Преимущества участников</a></li>
+              <li class="nav-item d-xl-none"><a href="#" class="nav-link nav-link--red">Вступить в Supporters Group</a>
+              </li>
+            </ul>
+
+            <div class="site-header__login">
+
+              <!--Модальное окно для неавторизованного пользователя-->
+              <!-- <a href="#loginmodal" class="nav-link site-header__login-link" data-bs-toggle="modal">
+                Войти               
+              </a> -->
+
+              <div class="d-flex">
+                <a href="#loginmodal" class="nav-link d-flex align-items-center" data-bs-toggle="modal">
+                  <span>Войти</span>
+                  <div class="picresizing">
+                    <div class="picresizing__img-wrap">
+                      <img src="img/slide-1.jpg" class="picresizing__img" alt="">
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--Ссылка - красный блок-->
+              <!-- <div class="view">
+                <a href="#" class="nav-link site-header__login-link">SPARTAK1@MAIL.RU</a>-->
+
+              <!--Красный блок-->
+              <div class="user">
+                <div class="user__wrap">
+                  <div class="user__body">
+                    <div class="user__img-size mx-auto">
+                      <div class="user__img-wrap">
+                        <img src="img/userpic1.jpg" class="user__img" alt="Олег Романцев">
+                      </div>
+                    </div>
+                    <div class="user__name">Олег<br>Романцев</div>
+
+                    <!--Подписка неактивна-->
+                    <div class="user__subscribe user__subscribe--d-none">Подписка неактивна<br>до 12.03.2022</div>
+                    <a href="#" class="user__renew-subscribe user__link" role="button" aria-disabled="true">Продлить
+                      подписку</a>
+
+                    <!--Подписка активна-->
+                    <!-- <div class="user__subscribe">Подписка активна<br>до 12.03.2022</div>
+                          <span class="user__renew-subscribe">Продлить подписку</span> -->
+
+                    <a href="#" class="user__account user__link">Личный кабинет</a>
+                    <a href="#" class="user__login user__link">Выход</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="site-header__logo logo">
+          <img src="img/logo.svg" class="site-header__logo-img" width="126" height="140" alt="logo">
+        </div>
+      </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="container"></div>
+
+  <!-- Button trigger modal -->
+  <div style="display: none" ;>
     <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal" data-bs-target="#loginmodal">
       Войти
     </button>
@@ -32,13 +113,14 @@
     <button type="button" class="" data-bs-toggle="modal" data-bs-target="#delaccountmodal">
       Покинуть SG
     </button>
+  </div>
 
-    <!-- <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal"
-                      data-bs-target="#loginmodal">
-                      Войти
-                    </button> -->
+  <!--Модальное окно для неавторизованного пользователя-->
+  <!-- <a href="#loginmodal" class="nav-link site-header__login-link" data-bs-toggle="modal">Войти</a> -->
+
 
   </div>
+  <!--/.container-->
 
   <!-- Modal Почему Вы покидаеете аккаунт?-->
   <div class="modal fade whydelaccount" id="whydelaccountmodal" tabindex="-1"
@@ -155,18 +237,19 @@
               <img src="img/userpic1.jpg" class="user__img" alt="Олег Романцев">
             </div>
           </div>
-          <div class="user__name">Олег Романцев</div>
-          <div class="user__email">spartak1@mail.ru</div>
+          <div class="user__name">Олег<br>Романцев</div>
 
-          <!-- <div class="user__subscribe user__subscribe--d-none">Подписка неактивна<br>до 12.03.2022</div>
-          <a href="#" class="user__renew-subscribe" tabindex="-1" role="button" aria-disabled="true">Продлить
-            подписку</a> -->
-
-          <div class="user__subscribe">Подписка активна<br>до 12.03.2022</div>
-          <a href="#" class="user__renew-subscribe disabled" tabindex="-1" role="button" aria-disabled="true">Продлить
+          <!--Подписка неактивна-->
+          <div class="user__subscribe user__subscribe--d-none">Подписка неактивна<br>до 12.03.2022</div>
+          <a href="#" class="user__renew-subscribe user__link" role="button" aria-disabled="true">Продлить
             подписку</a>
-          <a href="#" class="user__account">Личный кабинет</a>
-          <a href="#" class="user__login">Выход</a>
+
+          <!--Подписка активна-->
+          <!-- <div class="user__subscribe">Подписка активна<br>до 12.03.2022</div>
+          <span class="user__renew-subscribe">Продлить подписку</span> -->
+
+          <a href="#" class="user__account user__link">Личный кабинет</a>
+          <a href="#" class="user__login user__link">Выход</a>
         </div>
       </div>
     </div>
