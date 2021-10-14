@@ -855,7 +855,7 @@ ul {
   &.navbar-expand-xl {
     @media (min-width: 1100px) {
       position: relative;
-      min-height: 74px;
+      // min-height: 74px;
     }
   }
 
@@ -864,16 +864,26 @@ ul {
   align-items: center;
   justify-content: space-between;
   background-color: $white;
-  min-height: 46px;
+  // min-height: 46px;
   @media (min-width: 481px) {
-    min-height: 70px;  
+    // min-height: 70px;  
   }
 
   &__wrap {
+    position: relative;
     @extend .gutter-x;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    min-height: 46px;
+    @media (min-width: 481px) {
+      min-height: 70px;  
+    }
+    @media (min-width: 1100px) {
+      position: relative;
+      min-height: 74px;
+    }
   }
   
   &.fixed {
@@ -1069,7 +1079,7 @@ ul {
   & .navbar-collapse {
     justify-content: space-between;
     @media (min-width: 1100px) {
-      transform: translateY(11px);
+      // transform: translateY(11px);
     }
   }
   &__login,
@@ -1145,6 +1155,7 @@ ul {
     }
   }
   &__login-link {
+    position: relative;
     @extend .red;
     display: flex;
     align-items: center;
@@ -1153,19 +1164,19 @@ ul {
     border: 0;
     background: none;
 
-    // &::after {
-    //   content: "";
-    //   display: inline-block;
-    //   width: 26px;
-    //   height: 26px;
-    //   flex: 0 0 26px;
-    //   background: url(../img/sprite.png) no-repeat -37px 0;
-    //   margin-left: 8px;
-    //   display: none;
-    //   @media (min-width: 1100px) {
-    //     display: block;
-    //   }
-    // }
+    &--unauth::after {
+      content: "";
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+      background: url(../img/sprite.png) no-repeat -37px 0;
+      margin-left: 8px;
+      display: none;
+      @media (min-width: 1100px) {
+        display: block;
+      }
+    }
     
     &:hover {      
       cursor: pointer;      
@@ -1513,16 +1524,12 @@ ul {
   position: absolute;
   z-index: 1000;
   top: 100%;
-  right: 0;
-  // display: none;
+  right: 40px;
   width: 224px;
-  display: inline-flex;
   flex-direction: column;
-  // padding-top: 10px;
-  
-  // visibility: hidden;
-  // opacity: 0;
-  // transition: opacity .2s ease,visibility .2s ease,transform .2s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
 
   &__link {
     &:hover {
@@ -1538,7 +1545,7 @@ ul {
     height: 19px;
     background-color: $red-3;
     left: 50%;
-    top: -10px;
+    top: -9px;
     transform: translateX(-50%) rotate(45deg) ;
     z-index: 1;
   }
@@ -1639,7 +1646,9 @@ ul {
 
 .view:hover {
   .user {
-    display: block;
+    display: inline-flex;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
