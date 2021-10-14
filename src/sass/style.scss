@@ -1564,14 +1564,14 @@ ul {
     width: auto;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    // border-radius: 50%;
     max-height: 100%;
     max-width: 100%;
     margin: 0;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%,0);
-    border: 3px solid $red-4;
+    // border: 3px solid $red-4;
 
     &-size {
       width: 82px;
@@ -1683,6 +1683,93 @@ ul {
       padding-left: 30px;
       padding-right: 30px;
     }    
+  }
+}
+
+.uploadfile {
+  display: flex;
+  &__input {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__label {
+    flex-grow: 1;
+    background-image: url(../img/photopic.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 11px;
+    background-position: center;
+  }
+}
+
+.user-profile {    
+  $this: &;
+  padding: 1.1rem 0 1.12rem;  
+  border-bottom: 1px solid $gray;
+  
+  &__uploadfile {  
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba($white, 0.8);
+    width: 100%;
+    height: 23px;
+    transform: translateY(100%);
+    transition: transform 0.2s ease;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+      #{$this}__uploadfile {
+        transform: none;
+      }
+    }
+  }
+
+  &__img-size {
+    width: 72px;
+    flex-basis: 72px;
+    flex-shrink: 0;
+    border: 3px solid #980000;
+    border-radius: 50%;
+    overflow: hidden;
+
+  }
+
+  &__img-wrap {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
+
+  &__body {
+    margin-left: 19px;
+  }
+
+  &__name {
+    font-family: "PFDinTextCondPro-Medium";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 1px;
+  }
+
+  &__subscribe {
+    display: inline-flex;
+    font-size: 14px;
+    line-height: 16px;    
+    padding: 2px 0;
+    color: $red-2;
+    &--no-active {
+      background-color: $red-2;
+      color: $white;  
+      padding: 2px 6px 4px;
+    }
   }
 }
 
