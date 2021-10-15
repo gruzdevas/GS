@@ -66,7 +66,7 @@
 
 											<!--Подписка активна-->
 											<!-- <div class="user__subscribe">Подписка активна<br>до 12.03.2022</div>
-							                                          <span class="user__renew-subscribe">Продлить подписку</span> -->
+							             <span class="user__renew-subscribe">Продлить подписку</span> -->
 
 											<a href="#" class="user__account user__link">Личный кабинет</a>
 											<a href="#" class="user__login user__link">Выход</a>
@@ -209,28 +209,50 @@
 												data-bs-parent="#accordionAccount">
 												<div class="accordion-body">
 
-													<!--Подписка неактуальна-->
-													<div class="alert mb-3">
-														<div class="alert__label no-actual alert--icon mb-3">Подписка не активна</div>
-														<div class="alert__label no-actual mb-3">
+													<div class="subscribe-status">
+														<!--Подписка неактуальна-->
+														<div class="alert mb-3">
+															<div class="alert__label no-actual alert--icon mb-3"><b>Подписка не активна</b></div>
+															<div class="alert__label no-actual mb-3">
+																Автоматическое продление подписки<br>
+																21.02.2021 Будет списано 1200₽
+															</div>
+														</div>
+
+														<!--Подписка актуальна-->
+														<!-- <div class="alert mb-3">
+														<div class="alert__label mb-3"><b>Подписка активна до 21.02.2021</b></div>
+														<div class="alert__label mb-3">
 															Автоматическое продление подписки<br>
 															21.02.2021 Будет списано 1200₽
 														</div>
+													</div> -->
+														<!---------------->
 													</div>
-													<div class="btn__wrap">
-														<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">ПРОДЛИТЬ</button>
+
+													<div class="subscribe-renew">
+														<h2 class="subscribe-renew__title accordion-header ">Продлить подписку</h2>
+														<div class="form-check">
+															<input class="form-check-input subscribe-renew__input" type="radio" name="subscribe-renew"
+																id="subscribe-renew1" checked>
+															<label class="form-check-label subscribe-renew__label" for="subscribe-renew1">
+																на год
+															</label>
+														</div>
+														<div class="form-check">
+															<input class="form-check-input subscribe-renew__input" type="radio" name="subscribe-renew"
+																id="subscribe-renew2">
+															<label class="form-check-label subscribe-renew__label" for="subscribe-renew2">
+																на полгода
+															</label>
+														</div>
 													</div>
+
 												</div>
 
-												<!--Подписка актуальна-->
-												<div class="alert mb-3">
-													<div class="alert__label mb-3">Подписка активна до 21.02.2021</div>
-													<div class="alert__label mb-3">
-														Автоматическое продление подписки<br>
-														21.02.2021 Будет списано 1200₽
-													</div>
+												<div class="btn__wrap">
+													<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">ПРОДЛИТЬ</button>
 												</div>
-												<!---------------->
 											</div>
 										</div>
 

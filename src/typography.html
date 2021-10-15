@@ -102,18 +102,10 @@
   </header>
 
   <div class="container">
+    <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal" data-bs-target="#loginmodal">
+      Удалить карту
+    </button>
 
-    <h3>Загрузка файла</h3>
-
-    <div class="user-profile__uploadfile uploadfile" style="position: static;">
-      <label class="user-profile__label  uploadfile__label">
-        <input type="file" id="file" aria-label="Загрузить фото" class="user-profile__input uploadfile__input">
-      </label>
-    </div>
-  </div>
-
-  <!-- Button trigger modal -->
-  <div style="display: none" ;>
     <button type="button" class="nav-link site-header__login-link" data-bs-toggle="modal" data-bs-target="#loginmodal">
       Войти
     </button>
@@ -126,6 +118,18 @@
       Покинуть SG
     </button>
   </div>
+
+  <div class="container">
+
+    <h3>Загрузка файла</h3>
+
+    <div class="user-profile__uploadfile uploadfile" style="position: static;">
+      <label class="user-profile__label  uploadfile__label">
+        <input type="file" id="file" aria-label="Загрузить фото" class="user-profile__input uploadfile__input">
+      </label>
+    </div>
+  </div>
+
 
   <!--Модальное окно для неавторизованного пользователя-->
   <!-- <a href="#loginmodal" class="nav-link site-header__login-link" data-bs-toggle="modal">Войти</a> -->

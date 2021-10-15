@@ -1706,7 +1706,7 @@ ul {
 .user-profile {    
   $this: &;
   padding: 1.1rem 0 1.12rem;  
-  border-bottom: 1px solid $gray;
+  // border-bottom: 1px solid $gray;
   
   &__uploadfile {  
     position: absolute;
@@ -1716,18 +1716,18 @@ ul {
     width: 100%;
     height: 23px;
     transform: translateY(100%);
-    transition: transform 0.2s ease;
+    transition: transform 0.18s ease;
   }
 
   &__wrap {
     display: flex;
     align-items: center;
-    &:hover {
-      cursor: pointer;
-      #{$this}__uploadfile {
-        transform: none;
-      }
-    }
+    // &:hover {
+    //   cursor: pointer;
+    //   #{$this}__uploadfile {
+    //     transform: none;
+    //   }
+    // }
   }
 
   &__img-size {
@@ -1737,7 +1737,6 @@ ul {
     border: 3px solid #980000;
     border-radius: 50%;
     overflow: hidden;
-
   }
 
   &__img-wrap {
@@ -1745,6 +1744,11 @@ ul {
     height: 0;
     padding-bottom: 100%;
     overflow: hidden;
+    &:hover {
+      #{$this}__uploadfile {
+        transform: none;
+      }
+    }
   }
 
   &__body {
@@ -2071,18 +2075,21 @@ ul {
 
 .form-check {
   display: block;
-  min-height: 35px;
-  padding-left: 66px;
+  min-height: 29px;
+  padding-left: 46px;
+    
+  // padding-left: 66px;
   margin-bottom: 34px;
 }
 .form-check .form-check-input {
   float: left;
-  margin-left: -51px;
+  margin-left: -46px;
+  // margin-left: -51px;
 }
 
 .form-check-input {
-  width: 35px;
-  height: 35px;
+  width: 29px;
+  height: 29px;
   // margin-top: 0.25em;
   vertical-align: top;
   background-color: $white;
@@ -2095,6 +2102,10 @@ ul {
   appearance: none;
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
+  @media (min-width: 768px) {
+    width: 35px;
+    height: 35px;
+  }
 }
 .form-check-input[type=checkbox] {
   border-radius: 50%;
@@ -2546,24 +2557,52 @@ ul {
   }
 }
 
+.subscribe-status {
+  padding-bottom: 50px;
+  border-bottom: 1px solid $gray;
+}
+
+.subscribe-renew {
+  margin-top: 41px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+}
+
 .alert {
   &__label {
     display: flex;
     align-items: center;
+    font-size: 18px;
+
+    & b {
+      font-size: 25px;
+    }
+
     &::before {
       content: '';
-      display: inline-block;flex-basis: 35px;
+      display: inline-block;
+      flex-basis: 29px;
       flex-shrink: 0;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 50%;
-      width: 35px;
-      height: 35px;
+      width: 29px;
+      height: 29px;
+      border: 1px solid $red-2;
       background-image: url("data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06 9.83006L8.15 20.2001L18.6 1.06006' stroke='white' stroke-width='2.126' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");        
       background-color: $red-2;
+      background-size: 57%;
       border-color: $red-2;
       border: 1px solid $red-3;
-      margin-right: 17px;      
+      margin-right: 17px;     
+      @media (min-width: 768px) {        
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+        background-size: 59%;
+      } 
     }
 
     &.no-actual {
@@ -2574,7 +2613,10 @@ ul {
     }
     &.alert--icon::before {
       background-image: url("data:image/svg+xml,%3Csvg width='3' height='22' viewBox='0 0 3 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.5' y1='6.55671e-08' x2='1.5' y2='16' stroke='%23FF0000' stroke-width='3'/%3E%3Ccircle cx='1.5' cy='20.5' r='1.5' fill='%23FF0000'/%3E%3C/svg%3E%0A");
-      background-size: 3px 22px;         
+      background-size: 3px 18px;  
+      @media (min-width: 768px) { 
+        background-size: 3px 22px;  
+      }       
     }
   }
 }
