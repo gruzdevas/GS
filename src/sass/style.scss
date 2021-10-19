@@ -87,6 +87,7 @@ h2 {
   line-height: 29px;
   color: $black-1;
   font-weight: bold;
+  margin: 0;
 
   @media (min-width: 992px) {
     font-size: 29px;
@@ -2042,6 +2043,7 @@ ul {
 }
 
 .check-in {
+  $this: &;
   padding-top: 50px;
   @media (min-width: 481px) {
     padding-top: 86px;
@@ -2070,8 +2072,21 @@ ul {
     }    
   }
 
+  &-header {
+    @extend h2;    
+    padding: 1.1rem 0 1.12rem;
+    @media (min-width: 1300px) {
+      padding: 2.125rem 0;
+    }
+  }
+
   &__form-check {
     @extend .modal__form-check;
+  }
+  
+  &__wrap {
+    display: flex;
+    align-items: center;
   }
 
   &__form-check-label {
@@ -2081,10 +2096,28 @@ ul {
     }
   }
 
-  &__form-check-input {
-    @extend .modal__form-check-input;
+  &__form-input {
+    @extend .modal__form-check-input;    
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  &__form-label-captcha {
+    @extend h2;
+    display: inline-block;
+    max-width: 280px;
+  }
+
+  &__captcha-img {    
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 176px;
+    flex-shrink: 0;
   }
   
+  &__btn {
+    width: auto;
+  }
 }
 
 .uploadfile {
@@ -2873,6 +2906,9 @@ ul {
 
   &__title {
     margin-bottom: 1.12rem;
+    @media (min-width: 1300px) {
+      margin-bottom: 2.125rem;
+    }
   }
 
   &__label {
