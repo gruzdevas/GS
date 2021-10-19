@@ -226,8 +226,6 @@ a {
   }
 }
 
-
-
 .d-none {
   display: none !important;
 }
@@ -342,9 +340,9 @@ textarea {
   margin-bottom: 1.5rem !important;
 }
 
-.mb-4-5 {
-  margin-bottom: 1.79rem !important;
-}
+// .mb-4-5 {
+//   margin-bottom: 1.79rem !important;
+// }
 
 .mb-5 {
   margin-bottom: 2.4rem !important;
@@ -1843,7 +1841,7 @@ ul {
   $this: &;
   position: absolute;
   z-index: 1000;
-  top: 100%;
+  top: calc(100% - 14px);
   right: 40px;
   width: 224px;
   flex-direction: column;
@@ -1851,24 +1849,41 @@ ul {
   visibility: hidden;
   transition: opacity .2s ease, visibility .2s ease;
 
+  &__decor {
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 13px 14px 13px;
+      border-color: transparent transparent $red-3 transparent;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 1;
+    }
+
+  }
+
   &__link {
     &:hover {
       text-decoration: underline;
     }
   }
   
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 19px;
-    height: 19px;
-    background-color: $red-3;
-    left: 50%;
-    top: -9px;
-    transform: translateX(-50%) rotate(45deg);
-    z-index: 1;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   display: block;
+  //   width: 19px;
+  //   height: 19px;
+  //   background-color: $red-3;
+  //   left: 50%;
+  //   top: -9px;
+  //   transform: translateX(-50%) rotate(45deg);
+  //   z-index: 1;
+  // }
 
   &__img-wrap {
     height: 0;
@@ -1899,20 +1914,26 @@ ul {
   }
     
   &__wrap {
-    background-color: $red-3;
+    // background-color: $red-3;
     color: $white;
     text-align: center;    
-    padding: 6px;    
+    // padding: 6px;    
     min-width: 223px;
   }
 
+  &__inner {
+    border: 1px solid $white;
+    padding: 14px 12px 16px;
+  }
+
   &__body {
+    background-color: $red-3;
     color: $white;
     font-size: 18px;
     line-height: 22px;
-    border: 1px solid $white;
-    padding: 14px 12px 16px;
-    position: relative;
+    position: relative;  
+    padding: 6px;    
+    // padding: 14px 12px 16px;
     z-index: 2;
   }
   
@@ -1924,6 +1945,7 @@ ul {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
+    width: 100%;
     color: $red-4;      
     padding: 8px 0;
     border-top: 1px solid $white;
@@ -2588,7 +2610,7 @@ ul {
       width: 59px;
       height: 53px;
       background-size: contain;    
-      @media (min-width: 481px) {        
+      @media (min-width: 576px) {        
         width: 120px;
         height: 82px;
       }
@@ -2601,7 +2623,7 @@ ul {
       width: 59px;
       height: 53px;
       background-size: contain;           
-      @media (min-width: 481px) {        
+      @media (min-width: 576px) {        
         width: 120px;
         height: 82px;
       }    
@@ -2757,12 +2779,12 @@ ul {
 }
 
 .whydelaccount {
-  &__modal-body {
-    padding-bottom: 30px;
-    @media (min-width: 1300px) {
-      padding-bottom: 47px;
-    }
-  }
+  // &__modal-body {
+  //   padding-bottom: 30px;
+  //   @media (min-width: 1300px) {
+  //     padding-bottom: 47px;
+  //   }
+  // }
 
   &__label {
     &-txt {
