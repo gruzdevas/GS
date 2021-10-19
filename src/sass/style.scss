@@ -358,6 +358,10 @@ textarea {
   margin-bottom: 4.4rem !important;
 }
 
+.pb-5 {
+  padding-bottom: 2.4rem !important;
+}
+
 @media (min-width: 481px) {
   
   .mb-sm-0 {
@@ -390,6 +394,12 @@ textarea {
 
   .mb-sm-auto {
     margin-bottom: auto !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .mb-md-3 {
+    margin-bottom: 1rem !important;
   }
 }
 
@@ -1091,11 +1101,15 @@ svg {
   }
 
   .mb-xxl-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.68rem !important;
   }
 
   .mb-xxl-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 4rem !important;
+  }
+
+  .pb-xxl-5 {
+    padding-bottom: 4rem !important;
   }
 
 }
@@ -1870,14 +1884,14 @@ ul {
     width: auto;
     height: 100%;
     object-fit: cover;
-    // border-radius: 50%;
+    border-radius: 50%;
     max-height: 100%;
     max-width: 100%;
     margin: 0;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%,0);
-    // border: 3px solid $red-4;
+    border: 3px solid $red-4;
 
     &-size {
       width: 82px;
@@ -1964,10 +1978,6 @@ ul {
     padding-top: 86px;
   }
 
-  &__row {
-    margin-bottom: 68px;
-  }
-
   &__col {
     @media (min-width: 992px) {
       padding-left: 20px;
@@ -1993,6 +2003,19 @@ ul {
       padding-left: 30px;
       padding-right: 30px;
     }    
+  }
+
+  &__out {
+    text-align: center;
+
+    &-link {
+      font-size: 14px;
+      line-height: 17px;
+      @media (min-width: 768px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
   }
 }
 
@@ -2047,7 +2070,7 @@ ul {
     width: 72px;
     flex-basis: 72px;
     flex-shrink: 0;
-    border: 3px solid #980000;
+    border: 3px solid $red-4;
     border-radius: 50%;
     overflow: hidden;
   }
@@ -2090,9 +2113,6 @@ ul {
   }
 }
 .accordion {
-  &-body {    
-    padding-bottom: 45px;
-  }
 
   &__wrap {
     padding-top: 40px;
