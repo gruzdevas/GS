@@ -2041,6 +2041,52 @@ ul {
   }
 }
 
+.check-in {
+  padding-top: 50px;
+  @media (min-width: 481px) {
+    padding-top: 86px;
+  }
+  
+  &__col {
+    @media (min-width: 992px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__body {
+    background-color: $white;
+    padding-bottom: 24px;
+    @media (min-width: 992px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__header {
+    @media (min-width: 992px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }    
+  }
+
+  &__form-check {
+    @extend .modal__form-check;
+  }
+
+  &__form-check-label {
+    font-size: 14px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__form-check-input {
+    @extend .modal__form-check-input;
+  }
+  
+}
+
 .uploadfile {
   display: flex;
   &__input {
@@ -2442,12 +2488,17 @@ ul {
 
 .form-check {
   display: block;
-  padding-left: 46px;
-  
+  padding-left: 46px;  
+  @media (min-width: 1300px) {
+    padding-left: 52px;
+  }
 }
 .form-check .form-check-input {
   float: left;
   margin-left: -46px;
+  @media (min-width: 1300px) {
+    margin-left: -52px;
+  }
 }
 
 .form-check-input {
@@ -2578,6 +2629,7 @@ ul {
       width: 35px;
       height: 35px;
       background-size: 59%;
+      margin-top: -3px;
     }    
   }
 
@@ -2587,7 +2639,7 @@ ul {
     color: $black-1;
     font-size: 18px;
     line-height: 21px;
-    @media (min-width: 481px) {
+    @media (min-width: 768px) {
       font-size: 25px;
     }
   }

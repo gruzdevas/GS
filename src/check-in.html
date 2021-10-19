@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Регистрация</title>
+	<meta name="description" content="Сайт об HTML и создании сайтов">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="d-flex flex-column h-100">
+	<header class="site-header">
+
+		<nav class="navbar navbar-expand-xl">
+			<div class="container-lg">
+				<div class="navbar__wrap">
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-header__navbar"
+						aria-controls="site-header__navbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="site-header__navbar">
+						<ul class="navbar-nav main-menu">
+							<li class="nav-item"><a href="#about-us" class="nav-link">О Supporters Group</a></li>
+							<li class="nav-item"><a href="#advantages" class="nav-link">Преимущества участников</a></li>
+							<li class="nav-item d-xl-none"><a href="#" class="nav-link nav-link--red">Вступить в Supporters Group</a>
+							</li>
+						</ul>
+
+						<div class="site-header__login">
+							<!--Модальное окно для неавторизованного пользователя-->
+							<!--Ссылка для авторизации-->
+							<a href="#loginmodal" class="nav-link site-header__login-link site-header__login-link--unauth"
+								data-bs-toggle="modal">
+								Войти
+							</a>
+						</div>
+
+						<div class="site-header__logo logo">
+							<img src="img/logo.svg" class="site-header__logo-img" width="126" height="140" alt="logo">
+						</div>
+					</div>
+
+				</div>
+		</nav>
+	</header>
+
+	<main class="flex-shrink-0">
+		<div class="container-lg">
+
+			<div class="wrap">
+				<div class="check-in">
+					<h1 class="check-in__header">Регистрация</h1>
+					<div class="check-in__body">
+						<div class="container-fluid">
+							<div class="row">
+							</div>
+
+
+							<div class="container-fluid">
+								<div class="row account__row mb-5 mb-xxl-5">
+
+									<div class="col-lg-6 check-in__col">
+										<h2 class="check-in-header"">ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</h2>
+											<div class=" accordion-body pb-5 pb-xxl-5">
+											<form class="account__form">
+
+												<div class="row mb-3 mb-xxl-4">
+													<label for="account__username"
+														class="col-md-custom-1 col-lg-12 col-xxl-custom-1 col-form-label">Имя<sup
+															class="form__sup">*</sup></label>
+													<div class="col-md-custom-2 col-lg-12 col-xxl-custom-2">
+														<input type="text" class="form-control" id="account__username" value="" placeholder="Олег"
+															required>
+													</div>
+												</div>
+
+												<div class="row mb-3 mb-xxl-4">
+													<label for="account__username2"
+														class="col-md-custom-1 col-lg-12 col-xxl-custom-1 col-form-label">Фамилия<sup
+															class="form__sup">*</sup></label>
+													<div class="col-md-custom-2 col-lg-12 col-xxl-custom-2">
+														<input type="text" class="form-control" id="account__username2" value=""
+															placeholder="Романцев" required>
+													</div>
+												</div>
+
+												<div class="row mb-3 mb-xxl-4">
+													<label for="account__username3"
+														class="col-sm-2 col-md-custom-1 col-lg-12 col-xxl-custom-1 col-form-label">Отчество</label>
+													<div class="col-md-custom-2 col-lg-12 col-xxl-custom-2">
+														<input type="text" class="form-control" id="account__username3" value="" placeholder="">
+													</div>
+												</div>
+
+												<div class="row mb-3 mb-xxl-4">
+													<label for="account__email"
+														class="col-md-custom-1 col-lg-12 col-xxl-custom-1 col-form-label">E-mail<sup
+															class="form__sup">*</sup></label>
+													<div class="col-sm-10 col-md-custom-2 col-lg-12 col-xxl-custom-2">
+														<input type="email" class="form-control" id="account__email" value=""
+															placeholder="spartak1@mail.ru" required>
+													</div>
+												</div>
+
+												<div class="row mb-3 mb-xxl-4">
+													<label for="account__phone"
+														class="col-md-custom-1 col-lg-12 col-xxl-custom-1 col-form-label">Номер
+														телефона<sup class="form__sup">*</sup></label>
+													<div class="col-sm-10 col-md-custom-2 col-lg-12 col-xxl-custom-2">
+														<input type="text" class="form-control" id="account__phone" value="" placeholder=""
+															required>
+													</div>
+												</div>
+
+												<div class="row mb-5 mb-xxl-5">
+													<label for="account__city"
+														class="col-md-custom-1 col-lg-12 col-xxl-custom-1 col-form-label">Город<sup
+															class="form__sup">*</sup></label>
+													<div class="col-sm-10 col-md-custom-2 col-lg-12 col-xxl-custom-2">
+														<input type="text" class="form-control" id="account__city" value="" placeholder="Москва"
+															required>
+													</div>
+												</div>
+												<div class="row mb-3 mb-xxl-4">
+													<div class="col-12">
+														<div class="form-check check-in__form-check">
+															<input class="form-check-input check-in__form-check-input" type="checkbox" value=""
+																id="check-in__agree" checked>
+															<label class="form-check-label check-in__form-check-label" for="check-in__agree">
+																Соглашаюсь с договором присоединения
+															</label>
+														</div>
+													</div>
+												</div>
+
+												<div class="btn__wrap">
+													<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+												</div>
+											</form>
+									</div>
+
+								</div>
+
+								<div class="col-lg-6 check-in__col">
+									<h2 class="check-in-header">ДОГОВОР ПРИСОЕДИНЕНИЯ</h2>
+									<div>
+										<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+											aria-expanded="false" aria-controls="collapseExample">
+											Link with href
+										</a>
+									</div>
+									<div class="collapse" id="collapseExample">
+										<div class="card card-body">
+											<p>РОО "ПОДДЕРЖКА", именуемое в дальнейшем «Организация», в лице президента Коршунова Валентина
+												Аркадьевича, действующего
+												на основании Устава, с одной стороны, и Вы, именуемый (-ая) в дальнейшем «Пользователь», с
+												другой стороны, при
+												совместном упоминании в дальнейшем именуемые «Стороны», в соответствии с положениями
+												законодательства Российской
+												Федерации, заключили настоящий Договор присоединения (далее – Договор) о нижеследующем: Стороны
+												заключают настоящий
+												Договор, руководствуясь положениями статей 421 и 428 Гражданского кодекса Российской Федерации.
+											</p>
+
+											<h3>ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</h3>
+
+											<p>В настоящем Договоре и/или Приложениях к нему используются следующие термины, имеющие
+												определенное ниже значение. В случае, если в Договоре и/или Приложениях к нему используются
+												термины и понятия, не определенные в настоящем разделе Договора, они имеют значения, которые
+												обычно придаются им в соответствующей
+												отрасли/сфере.</p>
+
+											<p>Авторизация Пользователя – осуществление определенного набора действий, зафиксированных в
+												Приложении № 1 (Порядок регистрации и авторизации) к настоящему Договору, в Приложении или на
+												Сайте, в целях идентификации зарегистрированного Пользователя для последующего пользования
+												Сервисом «Организации» посредством Приложения и / или
+												Сайта.</p>
+
+											<p>Аккаунт – совокупность всей имеющейся информации о лице, зарегистрировавшемся на Сайте:
+												уникальное имя (логин и пароль для входа на Сайт, указываемые при регистрации на Сайте), а также
+												любая иная информация,
+												размещаемая им на Сайте.
+												Аккаунт создается при регистрации на Сайте и является неотъемлемой частью Сайта. При создании
+												Аккаунта, ему
+												присваивается уникальный номер «ID». Аккаунт нельзя продавать, покупать, передавать, совершать с
+												ним какие-либо
+												действия, вследствие которых он перестаёт быть в пользовании у Пользователя, создавшего данный
+												Аккаунт.</p>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer mt-auto">
+		<div class="footer__subfooter">
+			<div class="container">
+				<div class="text-center mb-2"><a href="#" class="link link-black-1 link-underline">Политика
+						Конфиденциальности.</a>
+				</div>
+				<div class="text-center"><a href="#" class="link link-black-1 link-underline">Договор присоединения</a></div>
+			</div>
+		</div>
+
+		<div class="footer__main bg-dark">
+			<div class="container">
+				<div class="socials">
+					<div class="socials__list">
+						<div class="socials__item"><a href="https://www.youtube.com/c/SupportersGroup?app=desktop"
+								class="socials__link" title="Youtube" target="_blank"><img src="img/circle_youtube.svg"
+									class="img-fluid"></a>
+						</div>
+						<div class="socials__item"><a href="https://vk.com/sgfcsm" class="socials__link" title="Вконтакте"
+								target="_blank"><img src="img/circle_vk.svg" class="img-fluid"></a></div>
+						<div class="socials__item"><a href="https://www.instagram.com/supporters_group/" class="socials__link"
+								title="Инстаграм" target="_blank"><img src="img/circle_insta.svg" class="img-fluid"></a></div>
+					</div>
+				</div>
+				<div class="footer__wrap mx-auto">
+					<div class="footer__txt">Региональная общественная организация «Содействие развитию спорта «ПОДДЕРЖКА»</div>
+					<div class="footer__address">115191, г. Москва, пер. Духовской, д. 17, стр. 15</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+		integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
