@@ -2126,6 +2126,11 @@ ul {
     }
   }
 
+  &-agreement-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+
   &__form-check {
     @extend .modal__form-check;
   }
@@ -3089,6 +3094,28 @@ ul {
       }       
     }
   }
+}
+
+// .scrollbar 
+.mCSB_scrollTools {
+  width: 22px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: $gray;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 1px;
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  border-radius: 50%;
+  background-color: $red-3;
+  width: 20px;
+  height: 20px;
+}
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger {  
+  height: 20px;
 }
 
 .footer {

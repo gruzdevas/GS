@@ -34,3 +34,4 @@ $('.navbar-toggler').on('click', function(){
      $('.navbar').css({'position':'fixed'});
   }
 });
+

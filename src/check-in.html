@@ -15,6 +15,8 @@
 		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -169,15 +171,63 @@
 
 									<div class="col-lg-6 check-in__col">
 										<div class="check-in-agreement">
-											<h2 class="check-in-header check-in-agreement-header">ДОГОВОР ПРИСОЕДИНЕНИЯ</h2>
+											<!-- <h2 class="check-in-header check-in-agreement-header">ДОГОВОР ПРИСОЕДИНЕНИЯ</h2> -->
+											<!-- <div class="check-in-agreement-body scrollbar">
+												<p>РОО "ПОДДЕРЖКА", именуемое в дальнейшем «Организация», в лице президента Коршунова
+													Валентина
+													Аркадьевича, действующего
+													на основании Устава, с одной стороны, и Вы, именуемый (-ая) в дальнейшем «Пользователь», с
+													другой стороны, при
+													совместном упоминании в дальнейшем именуемые «Стороны», в соответствии с положениями
+													законодательства Российской
+													Федерации, заключили настоящий Договор присоединения (далее – Договор) о нижеследующем:
+													Стороны
+													заключают настоящий
+													Договор, руководствуясь положениями статей 421 и 428 Гражданского кодекса Российской
+													Федерации.
+												</p>
+
+												<h3>ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</h3>
+
+												<p>В настоящем Договоре и/или Приложениях к нему используются следующие термины, имеющие
+													определенное ниже значение. В случае, если в Договоре и/или Приложениях к нему используются
+													термины и понятия, не определенные в настоящем разделе Договора, они имеют значения, которые
+													обычно придаются им в соответствующей
+													отрасли/сфере.</p>
+
+												<p>Авторизация Пользователя – осуществление определенного набора действий, зафиксированных в
+													Приложении № 1 (Порядок регистрации и авторизации) к настоящему Договору, в Приложении или
+													на
+													Сайте, в целях идентификации зарегистрированного Пользователя для последующего пользования
+													Сервисом «Организации» посредством Приложения и / или
+													Сайта.</p>
+
+												<p>Аккаунт – совокупность всей имеющейся информации о лице, зарегистрировавшемся на Сайте:
+													уникальное имя (логин и пароль для входа на Сайт, указываемые при регистрации на Сайте), а
+													также
+													любая иная информация,
+													размещаемая им на Сайте.
+													Аккаунт создается при регистрации на Сайте и является неотъемлемой частью Сайта. При
+													создании
+													Аккаунта, ему
+													присваивается уникальный номер «ID». Аккаунт нельзя продавать, покупать, передавать,
+													совершать
+													с
+													ним какие-либо
+													действия, вследствие которых он перестаёт быть в пользовании у Пользователя, создавшего
+													данный
+													Аккаунт.</p>
+
+											</div> -->
 											<div>
 												<a class="check-in-header check-in-agreement-header collapsed" data-bs-toggle="collapse"
-													href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+													href="#collapseagreement" role="button" aria-expanded="false"
+													aria-controls="collapseagreement">
 													ДОГОВОР ПРИСОЕДИНЕНИЯ
 												</a>
 											</div>
-											<div class="collapse" id="collapseExample">
-												<div class="card card-body">
+											<div class="collapse" id="collapseagreement">
+												<div class="check-in-agreement-body scrollbar">
 													<p>РОО "ПОДДЕРЖКА", именуемое в дальнейшем «Организация», в лице президента Коршунова
 														Валентина
 														Аркадьевича, действующего
@@ -280,8 +330,27 @@
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
 
-	<script src="js/script.js"></script>
+	Google CDN jQuery with fallback to local
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../src/js/minified/jquery-1.11.0.min.js"><\/script>')</script>
 
+	<!-- custom scrollbar plugin -->
+	<script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script>
+			(function ($) {
+				$(window).on("load", function () {
+
+					$(".scrollbar").mCustomScrollbar({
+						autoHideScrollbar: false,
+						theme: "rounded"
+					});
+
+				});
+			})(jQuery);
+	</script>
+
+	<script src="js/script.js"></script>
 </body>
 
 </html>
