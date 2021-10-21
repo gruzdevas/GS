@@ -444,7 +444,9 @@ svg {
     color: $black-2 !important;
   }
 }
-
+.box-shadow2 {
+  box-shadow: -2px 12px 57px 0px rgba(0, 0, 1, 0.89);
+}
 .btn {
   border-radius: 0;
   display: inline-block;
@@ -1179,18 +1181,6 @@ ul {
   right: 0;
   top: 0;
   z-index: 15;
-  box-shadow: -2px 12px 57px 0px rgba(0, 0, 1, 0.89);
-  @media (min-width: 1100px) {
-    box-shadow: none;
-  }
-
-  &.navbar-expand-xl {
-    @media (min-width: 1100px) {
-      position: relative;
-      // min-height: 74px;
-    }
-  }
-
   display: flex;
   display: -ms-flexbox;
   flex-wrap: wrap;
@@ -1200,6 +1190,17 @@ ul {
   // min-height: 46px;
   @media (min-width: 481px) {
     // min-height: 70px;  
+  }
+  // box-shadow: -2px 12px 57px 0px rgba(0, 0, 1, 0.89);
+  @media (min-width: 1100px) {
+    box-shadow: none;
+  }
+
+  &.navbar-expand-xl {
+    @media (min-width: 1100px) {
+      position: relative;
+      // min-height: 74px;
+    }
   }
 
   &__wrap {
@@ -1417,12 +1418,12 @@ ul {
     justify-content: space-between;
   }
 
-  &__login {
-    display: none;
-    @media (min-width: 1100px) {
-      display: block;
-    }
-  }
+  // &__login {
+  //   display: none;
+  //   @media (min-width: 1100px) {
+  //     display: block;
+  //   }
+  // }
   &__login,
   & .main-menu {
     @media (min-width: 1100px) {
@@ -1930,6 +1931,13 @@ ul {
 
     &-size {
       width: 82px;
+
+      &-mobile {
+        width: 62px;
+        @media (min-width: 768px) {
+          width: 82px;
+        }
+      }
     }
   }
     
@@ -1940,8 +1948,11 @@ ul {
       &::before {
         content: '';
         display: block;
-        height: 41px;
+        height: 31px;
         background-color: $white;
+        @media (min-width: 768px) {
+          height: 41px;
+        }
       }
     }
   }
@@ -1962,16 +1973,18 @@ ul {
     font-size: 18px;
     line-height: 22px;
     position: relative;  
-    padding: 6px;
-    // padding:  0 20px;    
+    padding: 6px;  
     z-index: 2;
 
     &-mobile {
       font-size: 20px;
       line-height: 24px;
       padding: 0 20px;
-      margin-top: -41px;
+      margin-top: -31px;
       background-color: transparent;
+      @media (min-width: 768px) {
+        margin-top: -41px;
+      }
     }
   }
   
@@ -2122,6 +2135,7 @@ ul {
   &__body {
     background-color: $white;
     padding-bottom: 24px;
+    padding-top: 0.6rem;
     @media (min-width: 992px) {
       padding-left: 10px;
       padding-right: 10px;
@@ -2165,6 +2179,10 @@ ul {
     padding: 1.1rem 0 1.12rem;
     text-align: left;
     text-decoration: none;
+    display: none;
+    @media (min-width: 992px) {
+      display: block;
+    }
     @media (min-width: 1300px) {
       padding: 2.125rem 0;
     }
@@ -2191,13 +2209,20 @@ ul {
         background-size: 24px;
       } 
     }
+
+    &-collapse {
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
   }
 
   &__agreement-body {
     &.scrollbar {
       @media (min-width: 992px) {
-        max-height: calc(100vh - 200px);
-        overflow-y: scroll;
+        // max-height: calc(100vh - 200px);
+        max-height: 100vh;
+        overflow-y: auto;
       }}
   }
 
