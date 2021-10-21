@@ -1252,11 +1252,11 @@ ul {
 
 .nav-link {
   font-family: "PFDinTextCondPro-Medium";
+  font-size: 24px;
   font-weight: 500;
   display: block;
   padding: 0.5rem 12px 0.5rem 0;
   color: $black-2;
-  font-size: 24px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.28px;
@@ -1880,6 +1880,10 @@ ul {
     }
   }
 
+  &-mobile {
+    background-color: $red-3;
+  }
+
   &__link {
     &:hover {
       text-decoration: underline;
@@ -1917,11 +1921,24 @@ ul {
   &__wrap {
     color: $white;
     text-align: center; 
+    &-mobile {
+      &::before {
+        content: '';
+        display: block;
+        height: 41px;
+        background-color: $white;
+      }
+    }
   }
 
   &__inner {
     border: 1px solid $white;
     padding: 14px 12px 16px;
+
+    &-mobile {
+      border: 0;
+      padding: 0 0 16px;
+    }
   }
 
   &__body {
@@ -1930,13 +1947,28 @@ ul {
     font-size: 18px;
     line-height: 22px;
     position: relative;  
-    padding: 6px;    
-    // padding: 14px 12px 16px;
+    padding:  0 20px;    
     z-index: 2;
+
+    &-mobile {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 0 20px;
+      margin-top: -41px;
+      background-color: transparent;
+    }
   }
   
   &__name {       
     margin-bottom: 8px;
+
+    &-mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__email-mobile {
+    color: $red-4; 
   }
   
   &__renew-subscribe {
@@ -1945,6 +1977,9 @@ ul {
     width: 100%;
     color: $red-4;      
     padding: 8px 0;
+    &-mobile {          
+      padding: 12px 0;
+    }
   }
 
   &__subscribe {
@@ -1963,7 +1998,11 @@ ul {
         border-top: 1px solid $white;
         border-bottom: 1px solid $white; 
         margin-bottom: 8px;
+        &-mobile {
+          margin-bottom: 12px;
+        }
       }
+
     }
   }
 
@@ -2085,7 +2124,20 @@ ul {
     }
   }
 
-  &-agreement-header {    
+  &__agreement {
+    font-size: 14px;
+    line-height: 17px;
+    border-top: 1px solid $gray;
+    padding-top: 1rem;
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 22px;
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__agreement-header {    
     position: relative;
     display: flex;
     align-items: center;
@@ -2121,9 +2173,12 @@ ul {
     }
   }
 
-  &-agreement-body {
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
+  &__agreement-body {
+    &.scrollbar {
+      @media (min-width: 992px) {
+        max-height: calc(100vh - 200px);
+        overflow-y: scroll;
+      }}
   }
 
   &__form-check {
