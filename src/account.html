@@ -65,7 +65,6 @@
 							<li class="nav-item"><a href="#about-us" class="navbar__nav-link nav-link">О Supporters Group</a></li>
 							<li class="nav-item"><a href="#advantages" class="navbar__nav-link nav-link">Преимущества участников</a>
 							</li>
-							<!-- <li class="nav-item d-xl-none"><a href="#" class="navbar__nav-link nav-link nav-link--red">Вступить в Supporters Group</a></li> -->
 						</ul>
 
 						<div class="site-header__login">
@@ -89,17 +88,16 @@
 														<img src="img/userpic1.jpg" class="user__img" alt="Олег Романцев">
 													</div>
 												</div>
-												<!-- <div class="user__email">SPARTAK1@MAIL.RU</div> -->
 												<div class="user__name">Олег<br>Романцев</div>
 
 												<!--Подписка неактивна-->
-												<div class="user__subscribe user__subscribe--d-none">Подписка неактивна<br>до 12.03.2022</div>
+												<!-- <div class="user__subscribe user__subscribe--d-none">Подписка неактивна<br>до 12.03.2022</div>
 												<a href="#" class="user__renew-subscribe user__link" role="button">Продлить
-													подписку</a>
+													подписку</a> -->
 
 												<!--Подписка активна-->
-												<!-- <div class="user__subscribe">Подписка активна<br>до 12.03.2022</div>
-							             <span class="user__renew-subscribe">Продлить подписку</span> -->
+												<div class="user__subscribe">Подписка активна<br>до 12.03.2022</div>
+												<span class="user__renew-subscribe">Продлить подписку</span>
 
 												<a href="#" class="user__account user__link">Личный кабинет</a>
 												<a href="#" class="user__login user__link">Выход</a>
@@ -145,8 +143,11 @@
 											</div>
 											<div class="user-profile__body">
 												<div class="user-profile__name">Олег Романцев</div>
+
+												<!-- Выводится когда подписка неактивна -->
 												<div class="user-profile__subscribe user-profile__subscribe--no-active">подписка не активна
 												</div>
+												<!-- Выводится когда подписка активна -->
 												<!-- <div class="user-profile__subscribe">подписка активна до 20.01.21</div> -->
 											</div>
 										</div>
@@ -155,7 +156,6 @@
 							</div>
 						</div>
 
-						<!--Accordion -->
 						<div class="accordion accordion-flush" id="accordionAccount">
 							<div class="container-fluid">
 								<div class="row account__row mb-5 mb-xxl-5">
@@ -384,8 +384,9 @@
 								<button type="submit" class="btn btn-primary btn-ltsp-lg btn-lg">Выйти</button>
 							</div>
 
-							<div class="account__out"><a href="#" title="Покинуть Supporters Group и удалить аккаунт"
-									class="account__out-link link link-underline link-black-1">Покинуть Supporters Group и удалить
+							<div class="account__out"><a href="#delaccountmodal" title="Покинуть Supporters Group и удалить аккаунт"
+									class="account__out-link link link-underline link-black-1" data-bs-toggle="modal">Покинуть Supporters
+									Group и удалить
 									аккаунт</a></div>
 
 						</div>
@@ -427,6 +428,75 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Modal Покинуть аккаунт-->
+	<div class="modal fade delaccount" id="delaccountmodal" tabindex="-1" aria-labelledby="Покинуть аккаунт"
+		aria-hidden="true">
+		<div class="modal-dialog delaccount__modal-dialog modal-dialog--decor-1 modal-dialog--decor-2">
+			<div class="modal-content">
+				<div class="modal-header delaccount__modal-header">
+					<h5 class="modal-title modal__title">ВЫ ТОЧНО ХОТИТЕ<br>ПОКИНУТЬ SUPPORTERS GROUP И УДАЛИТЬ АККАУНТ</h5>
+					<button type="button" class="modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-footer">
+					<form class="delaccount__form">
+						<div class="btn__wrap mx-0 mb-4">
+							<button type="submit" value="Нет" class="btn btn-primary btn-lg btn-ltsp-lg modal-btn">Нет</button>
+						</div>
+						<div class="btn__wrap mx-0">
+							<button data-bs-target="#whydelaccountmodal" data-bs-toggle="modal" data-bs-dismiss="modal"
+								value="Да, точно" class="btn btn-secondary btn-lg btn-ltsp-lg modal-btn">Да, точно</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!------------------>
+
+	<!-- Modal Почему Вы покидаеете аккаунт?-->
+	<div class="modal fade whydelaccount" id="whydelaccountmodal" tabindex="-1"
+		aria-labelledby="Почему Вы покидаеете аккаунт?" aria-hidden="true">
+		<div class="modal-dialog whydelaccount__modal-dialog modal-dialog--decor-1 modal-dialog--decor-2">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title modal__title">УКАЖИТЕ ПРИЧИНУ<br>ПО КОТОРОЙ ВЫ ПОКИДАЕТЕ<br>SUPPORTERS GROUP</h5>
+					<button type="button" class="modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body whydelaccount__modal-body mb-3">
+					<form class="whydelaccount__form">
+
+						<div class="form-check modal__form-check mb-3 mb-xxl-4">
+							<input class="form-check-input modal__form-check-input" type="checkbox" id="whydelaccount1" checked>
+							<label class="form-check-label modal__form-check-label whydelaccount__label" for="whydelaccount1"> я
+								потерял интерес к
+								проекту</label>
+						</div>
+
+						<div class="form-check modal__form-check mb-3 mb-xxl-4">
+							<input class="form-check-input modal__form-check-input" type="checkbox" id="whydelaccount2">
+							<label class="form-check-label modal__form-check-label whydelaccount__label" for="whydelaccount2">я болею
+								за Динамо</label>
+						</div>
+
+						<div class="form-floating modal__form-floating">
+							<textarea class="form-control whydelaccount__txt" placeholder="свой комментарий"
+								id="whydelaccount__txt"></textarea>
+							<label for="whydelaccount__txt" class="whydelaccount__label-txt">свой комментарий</label>
+						</div>
+						<p class="whydelaccount__message">Вы покинули SG, Ваш аккаунт удален</p>
+				</div>
+				<div class="btn__wrap mx-0 mb-4">
+					<button type="submit" value="Нет"
+						class="whydelaccount__btn btn btn-primary btn-lg btn-ltsp-lg modal-btn">ПОКИНУТЬ SG</button>
+				</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<!------------------>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
 		integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="

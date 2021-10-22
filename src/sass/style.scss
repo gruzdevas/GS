@@ -704,6 +704,7 @@ svg {
   
   .col-md-6 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 }
@@ -774,97 +775,116 @@ svg {
 }
 
 .col {
-  flex: 1 0 0%;
+  flex: 1 0 0%;  
+  -ms-flex: 1 0 0%;
 }
 
 .row-cols-auto>* {
   flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   width: auto;
 }
 
 .row-cols-1>* {
   flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   width: 100%;
 }
 
 .col-12 {
   flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .col-md-auto {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: auto;
   }
 
   .col-md-1 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .col-md-2 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .col-md-3 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 25%;
   }
 
   .col-md-4 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .col-md-5 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .col-md-6 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 
   .col-md-7 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .col-md-8 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .col-md-9 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 75%;
   }
 
   .col-md-10 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .col-md-11 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .col-md-12 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 100%;
   }
   
   .col-md-custom-1 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 26%;
   }
   
   .col-md-custom-2 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 74%;
   }
 }
@@ -873,75 +893,90 @@ svg {
   
   .col-lg-auto {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: auto;
   }
 
   .col-lg-1 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .col-lg-2 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .col-lg-3 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 25%;
   }
 
   .col-lg-4 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .col-lg-5 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .col-lg-6 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 
   .col-lg-7 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .col-lg-8 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .col-lg-9 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 75%;
   }
 
   .col-lg-10 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .col-lg-11 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .col-lg-12 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 100%;
   }
  
   .col-lg {
-    flex: 1 0 0%;
+    flex: 1 0 0%;    
+    -ms-flex: 1 0 0%;
   }
 
   .row-cols-lg-2>* {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 
@@ -957,66 +992,79 @@ svg {
   }
   .col-xl-auto {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: auto;
   }
 
   .col-xl-1 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .col-xl-2 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .col-xl-3 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 25%;
   }
 
   .col-xl-4 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .col-xl-5 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .col-xl-6 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 
   .col-xl-7 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .col-xl-8 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .col-xl-9 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 75%;
   }
 
   .col-xl-10 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 83.33333333%;
   }
 
   .col-xl-11 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .col-xl-12 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 100%;
   }
 }
@@ -1024,51 +1072,61 @@ svg {
 @media (min-width: 1330px) {
   .col-xxl-auto {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: auto;
   }
 
   .col-xxl-1 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 8.33333333%;
   }
 
   .col-xxl-2 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 16.66666667%;
   }
 
   .col-xxl-3 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 25%;
   }
 
   .col-xxl-4 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 33.33333333%;
   }
 
   .col-xxl-5 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 41.66666667%;
   }
 
   .col-xxl-6 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 
   .col-xxl-7 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 58.33333333%;
   }
 
   .col-xxl-8 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 66.66666667%;
   }
 
   .col-xxl-9 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 75%;
   }
 
@@ -1079,22 +1137,26 @@ svg {
 
   .col-xxl-11 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 91.66666667%;
   }
 
   .col-xxl-12 {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 100%;
   }
 
   .col-xxl-custom-1 {
     flex: 0 0 auto;
-    width: 28%;
+    -ms-flex: 0 0 auto;
+    width: 31%;
   }
   
   .col-xxl-custom-2 {
     flex: 0 0 auto;
-    width: 72%;
+    -ms-flex: 0 0 auto;
+    width: 69%;
   }
 
   
@@ -1186,13 +1248,12 @@ ul {
   display: flex;
   display: -ms-flexbox;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   align-items: center;
+  -ms-flex-align: center;
   justify-content: space-between;
+  -ms-flex-pack: justify;
   background-color: $white;
-  // min-height: 46px;
-  @media (min-width: 481px) {
-    // min-height: 70px;  
-  }
   // box-shadow: -2px 12px 57px 0px rgba(0, 0, 1, 0.89);
   @media (min-width: 1100px) {
     box-shadow: none;
@@ -1201,7 +1262,6 @@ ul {
   &.navbar-expand-xl {
     @media (min-width: 1100px) {
       position: relative;
-      // min-height: 74px;
     }
   }
 
@@ -1234,14 +1294,18 @@ ul {
   display: flex;  
   display: -ms-flexbox;
   flex-wrap: inherit;
+  -ms-flex-wrap: inherit;
   align-items: center;
+  -ms-flex-align: center;
   justify-content: space-between;
+  -ms-flex-pack: justify;
 }
 
 .nav-item {
   display: flex;
   display: -ms-flexbox;
   align-items: center;
+  -ms-flex-align: center;
   &:not(:last-child) {
     margin-bottom: 4px;
   }
@@ -1305,6 +1369,7 @@ ul {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  -ms-flex-align: center;
   &.show {
     overflow: auto;
   }
@@ -1404,6 +1469,7 @@ ul {
 @media (min-width: 1100px) {
   .navbar-expand-xl {
     flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
     justify-content: flex-start;
   }
   .navbar-expand-xl .navbar-nav {
@@ -1427,6 +1493,7 @@ ul {
   background-color: $white;
   & .navbar-collapse {
     justify-content: space-between;
+    -ms-flex-pack: justify;
   }
 
   // .authorized &__login {
@@ -1532,6 +1599,7 @@ ul {
     display: flex;
     display: -ms-flexbox;
     align-items: center;
+    -ms-flex-align: center;
     padding-right: 0;
     justify-content: center;
     border: 0;
@@ -1543,6 +1611,7 @@ ul {
       width: 26px;
       height: 26px;
       flex: 0 0 26px;
+      -ms-flex: 0 0 26px;
       background: url(../img/sprite.png) no-repeat -37px 0;
       margin-left: 8px;
       display: none;
@@ -1597,6 +1666,7 @@ ul {
     display: -ms-flexbox;
     justify-content: center;
     align-items: center;
+    -ms-flex-align: center;
   }
   &__item {
     margin-bottom: 22px;
@@ -1789,6 +1859,7 @@ ul {
   }
   &__row>* {
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 100%;
     @media (min-width: 992px) {
       width: 50%;
@@ -1826,6 +1897,7 @@ ul {
       display: flex;
       display: -ms-flexbox;
       align-items: center;
+      -ms-flex-align: center;
     }
   }
   &__txt {
@@ -1839,10 +1911,12 @@ ul {
   &__img {
     margin-bottom: 15px;
     flex: 0 0 220px;
+    -ms-flex: 0 0 220px;
     @media (min-width: 992px) {
       margin-bottom: 0;
       padding-right: 20px;
       flex: 0 0 170px;
+      -ms-flex: 0 0 170px;
       svg,
       img {
         max-width: 100%;
@@ -1861,6 +1935,7 @@ ul {
     -ms-flex-direction: column;
     justify-content: center;
     align-items: center;
+    -ms-flex-align: center;
     background-image: url(../img/banner_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1897,6 +1972,7 @@ ul {
   -ms-flex-direction: column;
   justify-content: center;
   align-items: center;
+  -ms-flex-align: center;
 }
 
 .user { 
@@ -2207,6 +2283,7 @@ ul {
     display: flex;
     display: -ms-flexbox;
     align-items: center;
+    -ms-flex-align: center;
     width: 100%;
     padding: 1.1rem 0 1.12rem;
     text-align: left;
@@ -2266,6 +2343,7 @@ ul {
     display: flex;
     display: -ms-flexbox;
     align-items: center;
+    -ms-flex-align: center;
   }
 
   &__form-control-captcha {
@@ -2286,6 +2364,7 @@ ul {
   &__form-check-input {
     @extend .modal__form-check-input;    
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
   }
 
@@ -2297,6 +2376,7 @@ ul {
 
   &__captcha-img {    
     flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
     width: 50%;
     max-width: 176px;
     flex-shrink: 0;
@@ -2348,6 +2428,7 @@ ul {
     display: flex;
     display: -ms-flexbox;
     align-items: center;
+    -ms-flex-align: center;
     // &:hover {
     //   cursor: pointer;
     //   #{$this}__uploadfile {
@@ -2416,6 +2497,7 @@ ul {
   display: flex;
   display: -ms-flexbox;
   align-items: center;
+  -ms-flex-align: center;
   width: 100%;
   padding: 1.1rem 0 1.12rem;
   text-align: left;
@@ -2942,6 +3024,7 @@ ul {
   display: flex;
   display: -ms-flexbox;
   align-items: center;
+  -ms-flex-align: center;
   min-height: calc(100% - 1rem);
 }
 
@@ -3000,6 +3083,7 @@ ul {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
   padding: 1rem 1rem .6rem;  
   @media (min-width: 481px) {
     padding: 1rem;
@@ -3008,6 +3092,7 @@ ul {
 
 .modal-footer {
   align-items: center;
+  -ms-flex-align: center;
   justify-content: center;
   padding: 0 0.75rem 0.75rem 0.75rem;
   @media (min-width: 481px) {
@@ -3057,13 +3142,6 @@ ul {
 }
 
 .whydelaccount {
-  // &__modal-body {
-  //   padding-bottom: 30px;
-  //   @media (min-width: 1300px) {
-  //     padding-bottom: 47px;
-  //   }
-  // }
-
   &__label {
     &-txt {
       padding-top: 12px !important;
@@ -3078,12 +3156,13 @@ ul {
     }
   }
 
-  // &__btn {
-  //   @media (min-width: 768px) {
-  //     font-size: 29px;
-  //     line-height: 34px;
-  //   }
-  // }
+  &__message {
+    font-size: 1.1rem;
+    color: $red;
+    margin-top: 4px;
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 .subscribe-status {
@@ -3158,6 +3237,7 @@ ul {
     display: flex;
     display: -ms-flexbox;
     align-items: center;
+    -ms-flex-align: center;
     font-size: 14px;
     line-height: 17px;
     @media (min-width: 768px) and (max-width: 991.98px) {       
