@@ -6,7 +6,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const flexBugsFix = require("postcss-flexbugs-fixes");
 const postcssPresetEnv = require("postcss-preset-env");
-const csso = require("gulp-csso");
+// const csso = require("gulp-csso");
 const gulpif = require("gulp-if");
 const { collectBlockNames, notify } = require("../utils");
 const paths = require("../paths");
@@ -25,23 +25,25 @@ const buildSass = () => {
       "\n"
   );
 
-  return src(`${paths.sass.src}style.scss`)
-    .pipe(
-      gulpif(
-        !isProduction,
-        plumber({
-          errorHandler: (err) => {
-            notify("SASS build error", err);
-          },
-        })
+  return (
+    src(`${paths.sass.src}style.scss`)
+      .pipe(
+        gulpif(
+          !isProduction,
+          plumber({
+            errorHandler: (err) => {
+              notify("SASS build error", err);
+            },
+          })
+        )
       )
-    )
-    .pipe(gulpif(!isProduction, sourcemaps.init()))
-    .pipe(sass())
-    .pipe(postcss([flexBugsFix()]))
-    .pipe(gulpif(isProduction, csso()))
-    .pipe(gulpif(!isProduction, sourcemaps.write()))
-    .pipe(dest(paths.sass.dest));
+      .pipe(gulpif(!isProduction, sourcemaps.init()))
+      .pipe(sass())
+      .pipe(postcss([flexBugsFix()]))
+      // .pipe(gulpif(isProduction, csso()))
+      .pipe(gulpif(!isProduction, sourcemaps.write()))
+      .pipe(dest(paths.sass.dest))
+  );
 };
 
 const watchSass = (reload) => {
