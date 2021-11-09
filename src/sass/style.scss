@@ -3136,14 +3136,13 @@ ul {
 }
 .form-check-input[type="checkbox"] {
   border-radius: 50%;
+  background-color: $white;
 }
 .form-check-input[type="radio"] {
   border-radius: 50%;
 }
 .form-check-input:active {
-  background-color: transparent;
-  // -webkit-filter: brightness(90%);
-  // filter: brightness(90%);
+  background-color: $white;
 }
 .form-check-input:focus {
   border-color: $red-3;
