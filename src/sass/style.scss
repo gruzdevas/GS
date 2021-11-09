@@ -3141,8 +3141,9 @@ ul {
   border-radius: 50%;
 }
 .form-check-input:active {
-  -webkit-filter: brightness(90%);
-  filter: brightness(90%);
+  background-color: transparent;
+  // -webkit-filter: brightness(90%);
+  // filter: brightness(90%);
 }
 .form-check-input:focus {
   border-color: $red-3;
