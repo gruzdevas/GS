@@ -2429,6 +2429,50 @@ ul {
   }
 }
 
+.forgot-password {
+  $this: &;
+  padding-top: 50px;
+  @media (min-width: 481px) {
+    padding-top: 92px;
+  }
+
+  &__col {
+    @media (min-width: 992px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__body {
+    background-color: $white;
+    padding-bottom: 24px;
+    padding-top: 0.6rem;
+    @media (min-width: 992px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__header {
+    @media (min-width: 992px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &-header {
+    @extend h2;
+    padding: 1.1rem 0 1.12rem;
+    @media (min-width: 1300px) {
+      padding: 2.125rem 0;
+    }
+  }
+  &-sub-header {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .check-in {
   $this: &;
   padding-top: 50px;
@@ -3012,6 +3056,20 @@ ul {
   &__sup {
     color: $red;
     font-size: 1em;
+  }
+
+  &__additional-text {
+    font-family: "PFDinTextCondPro-Bold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      text-align: left;
+    }
+    @media (min-width: 1300px) {
+      text-align: left;
+    }
   }
 }
 
