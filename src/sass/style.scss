@@ -131,6 +131,39 @@ sup {
   top: -0.1em;
 }
 
+ol {
+  counter-reset: section;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 1rem;
+
+    &::before {
+      counter-increment: section;
+      content: counters(section, ".") ".";
+      float: left;
+      margin-right: 8px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    > p + p {
+      text-indent: 1rem;
+      margin-bottom: 0;
+    }
+
+    * > p:last-child,
+    * > li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 a {
   color: $red;
   text-decoration: underline;
