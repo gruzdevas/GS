@@ -137,8 +137,18 @@ ol {
   padding-left: 0;
 
   li {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 
+    p + p {
+      text-indent: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  > li {
     &::before {
       counter-increment: section;
       content: counters(section, ".") ".";
@@ -152,14 +162,27 @@ ol {
       clear: both;
     }
 
-    > p + p {
-      text-indent: 1rem;
-      margin-bottom: 0;
-    }
+    // > p + p:not(:last-child) {
+    //   text-indent: 1rem;
+    //   margin-bottom: 0;
+    // }
 
     * > p:last-child,
     * > li:last-child {
       margin-bottom: 0;
+    }
+
+    ol {
+      padding-left: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 1rem;
+    li::before {
+      content: "";
     }
   }
 }
