@@ -131,58 +131,61 @@ sup {
   top: -0.1em;
 }
 
-ol {
-  counter-reset: section;
-  list-style-type: none;
-  padding-left: 0;
+.document-txt {
+  ol {
+    counter-reset: section;
+    list-style-type: none;
+    padding-left: 0;
 
-  li {
-    margin-top: 1rem;
-
-    p + p {
-      text-indent: 1rem;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  > li {
-    &::before {
-      counter-increment: section;
-      content: counters(section, ".") ".";
-      float: left;
-      margin-right: 8px;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    // > p + p:not(:last-child) {
-    //   text-indent: 1rem;
-    //   margin-bottom: 0;
-    // }
-
-    * > p:last-child,
-    * > li:last-child {
-      margin-bottom: 0;
+    * h2,
+    * h3,
+    * h4 {
+      font-family: inherit;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 1.2rem;
     }
 
     ol {
       padding-left: 1rem;
       margin-bottom: 0;
     }
-  }
 
-  ul {
-    list-style: none;
-    padding-left: 1rem;
-    li::before {
-      content: "";
+    li {
+      * + * {
+        margin-top: 1px;
+      }
+
+      p + p {
+        text-indent: 1rem;
+      }
+    }
+
+    > li {
+      &::before {
+        counter-increment: section;
+        content: counters(section, ".") ".";
+        float: left;
+        margin-right: 8px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+      li::before {
+        content: "";
+      }
     }
   }
 }
